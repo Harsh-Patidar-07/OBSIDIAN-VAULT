@@ -13,8 +13,9 @@
 
 2. Benzaldehyde : 
    
-   `Yes : Reduces tollen's reagent`
-   `No : Aldol Condensation, Cannizzaro reaction, addition compound with Sodium Hydrogen Sulhite`
+   `Yes : Reduces tollen's reagent, Cannizzaro Reaction, formation of addition compound with Sodium Hydrogen Sulphite`
+   
+   `No : Aldol Condensation ( self, but can undergo if done via Cross method )`
 
 
 ---

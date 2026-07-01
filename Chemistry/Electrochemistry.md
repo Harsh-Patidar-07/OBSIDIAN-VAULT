@@ -96,3 +96,14 @@ $$\text{Halides } (I^- > Br^- > Cl^-) > \text{Water } (H_2O) > \text{Oxygenated 
 
 3. Why E M 2+/M show irregular trend : 
    answer : Due to the irregular variation of ionisation enthalpies ( iH1  iH2 ) and sublimation enthalpies
+
+
+---
+
+4. To Obtain max work from galvanic cell, charge has to be passed reversibly, as the reversible work done by a galvanic cell is equal to decrease in its Gibbs energy
+
+
+---
+
+
+5. 
