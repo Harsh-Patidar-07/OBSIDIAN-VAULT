@@ -1,3 +1,5 @@
 {
-  "cssTheme": "Proper Dark"
+  "cssTheme": "Proper Dark",
+  "showViewHeader": true,
+  "showRibbon": true
 }

@@ -1,0 +1,7 @@
+- [ ] IUPAC naming of organic chemistry
+- [ ] IUPAC naming of Coordination Compounds
+- [ ] Remember Electrochemical series
+- [ ] All formulas of Solutions, Electrochemistry, Chemical Kinetics
+- [ ] Graphs of Chemical Kinetics
+- [ ] All organic named reactions
+- [ ] All organic tests

@@ -48,4 +48,3 @@ The change in vapour pressure determines the depression or elevation in melting 
 
 ---
 
-Changes
