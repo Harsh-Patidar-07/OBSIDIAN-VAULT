@@ -49,3 +49,4 @@ The change in vapour pressure determines the depression or elevation in melting 
 ---
 
 
+1. Volatile and Non volatile solutes
