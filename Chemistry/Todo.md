@@ -5,3 +5,6 @@
 - [ ] Graphs of Chemical Kinetics
 - [ ] All organic named reactions
 - [ ] All organic tests
+- [ ] Physical properties of Organic compounds
+- [ ] Special organic compounds
+- [ ] Solutions : Graphs
