@@ -4,7 +4,7 @@
 * **Cathode (-):** Attracts **Cations** (+). **Reduction** occurs here (Gain of electrons).
 * **Anode (+):** Attracts **Anions** (-). **Oxidation** occurs here (Loss of electrons).
 
-> [!WARNING]  THE #1 JEE/BITSAT TRAP: Check the Electrode First!
+>  THE #1 JEE/BITSAT TRAP: Check the Electrode First!
 > * **Inert Electrodes (Pt, Graphite):** Do not react. Follow the competition rules below.
 > * **Active Electrodes (Cu, Ag, Ni):** The **Anode metal itself dissolves** ($M \rightarrow M^{n+} + ne^-$) because oxidizing the metal electrode is easier than oxidizing water or anions!
 
