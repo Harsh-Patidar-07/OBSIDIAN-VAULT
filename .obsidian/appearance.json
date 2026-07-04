@@ -4,7 +4,7 @@
   "showRibbon": true,
   "accentColor": "#e11d48",
   "interfaceFontFamily": "",
-  "textFontFamily": "Clear Sans Medium",
+  "textFontFamily": "Clear Sans,Clear Sans Medium,Inter",
   "monospaceFontFamily": "Clear Sans Medium",
   "baseFontSizeAction": true,
   "baseFontSize": 16

@@ -79,7 +79,7 @@ $$\text{Halides } (I^- > Br^- > Cl^-) > \text{Water } (H_2O) > \text{Oxygenated 
 ---
 
 
-# Knowledge Gaps
+## Knowledge Gaps
 
 1. **AC** is used to for measuring **resistance** of an ionic solution, as concentration of ionic solution will change if DC source is used. 
 
