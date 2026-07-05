@@ -30,3 +30,19 @@
 > Reason :
 > - They do not have any replaceable hydrogen atom.
 
+
+---
+
+> O-toluidine is **less basic than** aniline because of ortho effect. The ortho position substitution makes it difficult for -NH2 group to donate electron inspite of the electron donating tendency of -CH3 ( methyl group ) as a substituent
+
+
+---
+
+1. Aniline **does not react with** HCL, inspite being a Base. Instead, **it dissolves in it**.
+   Reason : 
+    - The lone pair of aniline nitrogen ( -NH2 ) forms a bond with H+ of HCL to give water soluble anilinium ion : C6 H5 NH3
+
+
+---
+
+2. 
