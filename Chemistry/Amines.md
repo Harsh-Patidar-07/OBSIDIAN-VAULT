@@ -26,3 +26,7 @@
 
 ##### Secondary ( 2 degree ) amines produce an insoluble compund on treatment with Hinsberg's reagent
 
+> Tertiary ( 3 degree ) amines do not undergo Acylation
+> Reason :
+> - They do not have any replaceable hydrogen atom.
+

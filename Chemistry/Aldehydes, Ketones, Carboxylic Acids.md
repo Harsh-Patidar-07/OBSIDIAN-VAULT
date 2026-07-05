@@ -39,3 +39,5 @@ $$(\text{CH}_3)_3\text{C-O-CH}_3 + \text{HI} \rightarrow (\text{CH}_3)_3\text{C-
 
 ---
 
+>only Formic Acid ( HCOOH ) from Carboxylic acids gives **silver mirror test**
+
