@@ -9,3 +9,4 @@
 - [ ] Special organic compounds
 - [ ] Solutions : Graphs
 - [ ] #Biochemistry Pyq's
+- [ ] #strong and weak field ligands
