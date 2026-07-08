@@ -6,7 +6,7 @@
 - [ ] All organic named reactions
 - [ ] All organic tests
 - [ ] Physical properties of Organic compounds
-- [ ] Special organic compounds
+- [ ] Special organic compounds ( CHCl3 .....)
 - [ ] Solutions : Graphs
 - [x] #Biochemistry Pyq's
 - [ ] #strong and weak field ligands
