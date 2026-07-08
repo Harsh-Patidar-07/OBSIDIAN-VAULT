@@ -8,5 +8,5 @@
 - [ ] Physical properties of Organic compounds
 - [ ] Special organic compounds
 - [ ] Solutions : Graphs
-- [ ] #Biochemistry Pyq's
+- [x] #Biochemistry Pyq's
 - [ ] #strong and weak field ligands
