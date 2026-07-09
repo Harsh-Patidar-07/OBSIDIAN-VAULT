@@ -2,10 +2,10 @@
   "cssTheme": "Proper Dark",
   "showViewHeader": true,
   "showRibbon": true,
-  "accentColor": "#e11d48",
+  "accentColor": "#7c3aed",
   "interfaceFontFamily": "",
   "textFontFamily": "Clear Sans,Clear Sans Medium,Inter",
   "monospaceFontFamily": "Clear Sans Medium",
   "baseFontSizeAction": true,
-  "baseFontSize": 18
+  "baseFontSize": 17
 }
