@@ -12,4 +12,10 @@
 
    ---------------
 
+> **Cu** has exceptional E ( M 2+ / M ) value
+> Reason : Because of its ( **high atomization enthalpy** ) and ( **low hydration enthalpy** )
+
+
+---
+
 3. 
