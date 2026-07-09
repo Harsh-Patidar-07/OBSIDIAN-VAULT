@@ -18,4 +18,10 @@
 
 ---
 
-3. 
+3. Why is the ability of oxygen more than fluorine to stabilise higher oxidation states of transition metals?
+   Answer : 
+     - because of the ability of oxygen to form multiple bonds with metal
+
+---
+
+4. 
