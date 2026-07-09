@@ -10,3 +10,4 @@
 - [ ] Solutions : Graphs
 - [x] #Biochemistry Pyq's
 - [ ] #strong and weak field ligands
+- [ ] Cell reactions in Electrochemistry
