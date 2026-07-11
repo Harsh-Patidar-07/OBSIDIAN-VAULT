@@ -23,7 +23,7 @@ Therefore, the secondary valency of Cobalt ($Co$) in this complex is **6**.
 
 ### The Spectrochemical Series Order
 
-$$I^- < Br^- < S^{2-} < SCN^- \text{ (S-bonded)} < Cl^- < N_3^- < F^- < OH^- < C_2O_4^{2-} \text{ (ox)} \approx H_2O < NCS^- \text{ (N-bonded)} < EDTA^{4-} < NH_3 < en < bpy < phen < NO_2^- < CH_3^- < C_6H_5^- < CN^- < CO$$
+>$$I^- < Br^- < S^{2-} < SCN^- \text{ (S-bonded)} < Cl^- < N_3^- < F^- < OH^- < C_2O_4^{2-} \text{ (ox)} \approx H_2O < NCS^- \text{ (N-bonded)} < EDTA^{4-} < NH_3 < en < bpy < phen < NO_2^- < CH_3^- < C_6H_5^- < CN^- < CO$$
 
 - **Weak Field Ligands (WFL):** Halogen and Oxygen donors ($\text{F}^-$, $\text{Cl}^-$, $\text{OH}^-$, $\text{H}_2\text{O}$, $\text{ox}^{2-}$). Do not force electron pairing.
     
