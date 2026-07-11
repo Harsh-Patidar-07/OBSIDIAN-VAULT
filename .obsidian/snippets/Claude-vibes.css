@@ -1,0 +1,51 @@
+/* 
+   ================================================================
+   PRIMARY THEME CORE DNA (LIGHTWEIGHT SNIPPET)
+   Strips 3,800+ lines of bloat. Keeps the exact colors & contrast.
+   ================================================================
+*/
+
+.theme-dark {
+    /* Primary's Exact Dark Mode Palette */
+    --background-primary: #1c1714;         /* Primary's signature deep brown-black */
+    --background-primary-alt: #161210;     /* Sidebar dark tone */
+    --background-secondary: #27211d;       /* Active file highlight */
+    
+    --text-normal: #e9e2d5;                /* High contrast soft cream body text */
+    --text-muted: #8c7e74;                 /* Earthy brown-gray for quiet text */
+    
+    --text-accent: #e26e43;                /* The genuine Primary accent orange */
+    --interactive-accent: #e26e43;
+    
+    --heading-color: #f7f4eb;              /* Clean ivory headings */
+}
+
+/* --- Exact Bold & Italic Rules from your screenshot --- */
+
+/* Bold (Strong) -> The exact rich brick/terracotta red */
+strong, .cm-strong {
+    color: #e25c43 !important;
+    font-weight: 700;
+}
+
+/* Italics (Emphasis) -> The crisp, muted sky-blue/teal */
+em, .cm-em {
+    color: #5ea1b9 !important;
+    font-style: italic;
+}
+
+/* Combination (Bold + Italic) */
+strong em, em strong, .cm-strong.cm-em {
+    color: #e0845c !important;
+}
+
+/* Lists and Bullet relationship lines matching the palette */
+.cm-list-indent-indicator, .list-bullet {
+    color: #4a3e36 !important;
+}
+
+/* Inline code blocks */
+code, .cm-inline-code {
+    background-color: #27211d !important;
+    color: #e26e43 !important;
+}

@@ -1,11 +1,12 @@
 {
-  "cssTheme": "Proper Dark",
+  "cssTheme": "Minimal",
   "showViewHeader": true,
   "showRibbon": true,
   "accentColor": "#7c3aed",
   "interfaceFontFamily": "",
-  "textFontFamily": "Clear Sans,Clear Sans Medium,Inter",
+  "textFontFamily": "Clear Sans,Inter,Clear Sans Medium",
   "monospaceFontFamily": "Clear Sans Medium",
   "baseFontSizeAction": true,
-  "baseFontSize": 17
+  "baseFontSize": 17,
+  "enabledCssSnippets": []
 }

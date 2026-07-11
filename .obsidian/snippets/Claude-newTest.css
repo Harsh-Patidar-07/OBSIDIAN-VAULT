@@ -1,0 +1,79 @@
+/* 
+   ================================================================
+   NORDIC ARCHIVE (ULTRA-CLEAN EDITORIAL SNIPPET)
+   ================================================================
+*/
+
+/* --- THE DARK EXTRACTION --- */
+.theme-dark {
+    --background-primary: #14181c;       /* Deep Nordic slate blue-gray (massively reduces eye strain) */
+    --background-primary-alt: #0e1114;   /* Darker graphite shade for sidebars and panels */
+    --background-secondary: #1f252b;     /* Clean slate-tinted active lines */
+    
+    --text-normal: #e2e8f0;              /* Crisp, clean winter-white for body text */
+    --text-muted: #64748b;               /* Cool muted slate gray for secondary info */
+    
+    --text-accent: #e2a06c;              /* Soft, glowing amber-copper for links */
+    --interactive-accent: #e2a06c;
+    
+    --heading-color: #ffffff;            /* Pure sharp white for layout structure */
+}
+
+/* --- THE LIGHT EXTRACTION --- */
+.theme-light {
+    --background-primary: #f8fafc;       /* Clean, high-end studio white (zero yellow haze) */
+    --background-primary-alt: #f1f5f9;   /* Soft misty gray for sidebars */
+    --background-secondary: #e2e8f0;     /* Perfect gray accent for active lines */
+    
+    --text-normal: #0f172a;              /* Ink-black for maximum reading sharpness */
+    --text-muted: #64748b;               /* Balanced slate gray for quiet text */
+    
+    --text-accent: #c26638;              /* Burnished copper for links */
+    --interactive-accent: #c26638;
+    
+    --heading-color: #000000;            /* True pitch black for headers */
+}
+
+/* 
+   ================================================================
+   CLEAN DESIGN SCANNABILITY INJECTIONS
+   ================================================================
+*/
+
+/* --- Bold (Strong) -> Burnished Copper/Muted Crimson --- */
+strong, .cm-strong {
+    color: #cc5b37 !important;
+    font-weight: 700;
+}
+.theme-dark strong, .theme-dark .cm-strong {
+    color: #e47755 !important; /* Perfect high-contrast pop against slate blue */
+}
+
+/* --- Italics (Emphasis) -> Muted Frost Teal --- */
+em, .cm-em {
+    color: #3b7b8c !important;
+    font-style: italic;
+}
+.theme-dark em, .theme-dark .cm-em {
+    color: #6bb0c2 !important; /* Extremely soothing on the eyes in dark mode */
+}
+
+/* --- Inline Code Blocks (Clean & Integrated) --- */
+code, .cm-inline-code {
+    background-color: var(--background-secondary) !important;
+    color: var(--text-accent) !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-size: 0.9em !important;
+}
+
+/* --- Lists and Layout Accents --- */
+.cm-list-indent-indicator, .list-bullet {
+    color: var(--text-muted) !important;
+    opacity: 0.3;
+}
+
+/* --- LaTeX / Math Blocks --- */
+.math, .cm-math {
+    color: var(--text-normal) !important;
+}
