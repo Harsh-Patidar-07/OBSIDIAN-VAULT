@@ -45,4 +45,42 @@
 
 ---
 
-2. 
+#### Reduction of Benzene Diazonium Chloride (BDC) to Benzene
+
+Benzene Diazonium Chloride ($\text{C}_6\text{H}_5\text{N}_2^+\text{Cl}^-$) can be reduced directly to **Benzene** ($\text{C}_6\text{H}_6$) using mild reducing agents. 
+
+##### 1. Using Ethanol ($\text{C}_2\text{H}_5\text{OH}$) #note : this is Ethanol, not Phenol, Phenol makes something else 
+Ethanol reduces the diazonium salt to benzene and gets oxidized to **ethanal** (acetaldehyde).
+$$\text{C}_6\text{H}_5\text{N}_2^+\text{Cl}^- + \text{C}_2\text{H}_5\text{OH} \rightarrow \mathbf{\text{C}_6\text{H}_6} + \text{CH}_3\text{CHO} + \text{N}_2\uparrow + \text{HCl}$$
+
+##### 2. Using Hypophosphorous Acid ($\text{H}_3\text{PO}_2 / \text{H}_2\text{O}$)
+Hypophosphorous acid (phosphinic acid) reduces the diazonium salt to benzene and gets oxidized to **phosphorous acid** ($\text{H}_3\text{PO}_3$).
+$$\text{C}_6\text{H}_5\text{N}_2^+\text{Cl}^- + \text{H}_3\text{PO}_2 + \text{H}_2\text{O} \rightarrow \mathbf{\text{C}_6\text{H}_6} + \text{H}_3\text{PO}_3 + \text{N}_2\uparrow + \text{HCl}$$
+
+> 📌 **Key Takeaway:** Both reagents replace the $-\text{N}_2^+\text{Cl}^-$ group with a hydrogen atom ($-\text{H}$), completely deaminating the aromatic ring.
+
+
+---
+
+> Aromatic primary amines *cannot* be prepared by Gabriel Phthalimide synthesis
+> Reason : 
+>   - aromatic halides *do not undergo nucleophilic substitution* with the anion formed by phthalimide.
+
+
+---
+
+>Diazonium salts of **aliphatic amines** *do not show resonance*.
+
+
+---
+
+>Diazonium salts of aromatic amines are more stable than those of aliphatic amines
+
+
+---
+
+1. **BDC** on reaction with **Phenol** forms a *Orange dye*
+
+
+---
+
