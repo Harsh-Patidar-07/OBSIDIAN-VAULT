@@ -42,8 +42,8 @@ The change in vapour pressure determines the depression or elevation in melting 
 
 ---
 
-### Dimerize : n = 2
-### Trimerize : n = 3
+### Dimerize : n = 2 ( Association of 2 parts )
+### Trimerize : n = 3 ( Association of 3 parts )
 
 
 ---
