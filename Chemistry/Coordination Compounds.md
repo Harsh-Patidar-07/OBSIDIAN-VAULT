@@ -19,6 +19,8 @@ $$\text{Secondary Valency} = \text{Total number of monodentate ligands} = 5 + 1 
 Therefore, the secondary valency of Cobalt ($Co$) in this complex is **6**.
 
 > The secondary valency of Pt in [Pt(en)2Cl2 ] 2+ is *6*
+
+>The secondary valency of Co in [Co(en)3 ] 3+ is 6
 ---
 
 ### The Spectrochemical Series Order
