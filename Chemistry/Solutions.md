@@ -48,3 +48,8 @@ The change in vapour pressure determines the depression or elevation in melting 
 
 ---
 
+> **Vapour pressure** *inversely proportional to* **Boiling Point** & *directly proportional to* **Freezing Point** 
+> $$V.P \propto \frac{1}{B.P} \propto F.P$$
+
+---
+
