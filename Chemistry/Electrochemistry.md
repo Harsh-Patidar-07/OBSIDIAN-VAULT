@@ -102,9 +102,10 @@ $$\text{Halides } (I^- > Br^- > Cl^-) > \text{Water } (H_2O) > \text{Oxygenated 
 
 4. To Obtain max work from galvanic cell, charge has to be passed reversibly, as the reversible work done by a galvanic cell is equal to decrease in its Gibbs energy
 
+---
 
+5. The molar conductivity of strong electrolyte increases slowly with dilution as there is no increase in number of ions on dilution because they are already completely dissociated whereas for weak electrolyte increases very rapidly on dilution as the number of ions increase due to increase in dissociation. 
 
 ---
 
-
-5. 
+6. 
