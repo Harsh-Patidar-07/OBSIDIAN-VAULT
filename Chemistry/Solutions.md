@@ -53,3 +53,8 @@ The change in vapour pressure determines the depression or elevation in melting 
 
 ---
 
+>Order of reactivity towards nucleophilic substitution reaction ( *SN1* ) is **alkyl halide > vinyl halide > halobenzene**.
+
+
+---
+
