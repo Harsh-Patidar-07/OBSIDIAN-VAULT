@@ -3,3 +3,9 @@
 
 ---
 
+1. Alchols reaction with *{ H2SO4 ( conc. ) }* is **Substitution reaction**
+
+
+---
+
+2. 
