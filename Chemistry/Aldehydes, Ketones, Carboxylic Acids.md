@@ -45,3 +45,6 @@ $$(\text{CH}_3)_3\text{C-O-CH}_3 + \text{HI} \rightarrow (\text{CH}_3)_3\text{C-
 
 > The formation of **cyanohydrin** from an *aldehyde* is an example of *Nucleophilic addition*
 
+
+---
+
