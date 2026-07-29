@@ -190,18 +190,5 @@
 
 ---
 
-## Case-Based Questions (4 Marks)
 
-### Case 1 Solutions
-
-> **Passage Context:** Carbohydrates are optically active polyhydroxy aldehydes or ketones...
-
-1. **Structural Features:**
-   - **(i) Carbonyl group:** Confirmed by reaction with $\text{HCN}$ to yield cyanohydrin or with $\text{H}_2\text{N-OH}$ to form oxime.
-   - **(ii) Five hydroxyl groups:** Confirmed by acetylation with acetic anhydride to give glucose pentaacetate. Since glucose is stable, all $5$ $-\text{OH}$ groups are bound to $5$ different carbon atoms.
-2. **Reducing Sugars:** Carbohydrates that contain free aldehyde or ketone groups (or free cyclic hemiacetal/hemiketal groups) capable of reducing Fehling's or Tollen's reagents.
-3. **Notation Meaning:**
-   - **'D'** refers to the relative spatial configuration at the lowest asymmetric carbon (matching $\text{D-glyceraldehyde}$).
-   - **'(+)'** denotes that the compound is **dextrorotatory** (rotates plane-polarized light clockwise).
-4. **Haworth Ring Structure of $\alpha\text{-D(+)-glucopyranose}$:**
 
