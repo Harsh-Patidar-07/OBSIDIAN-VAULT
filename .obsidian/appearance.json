@@ -1,10 +1,10 @@
 {
-  "cssTheme": "Typewriter",
+  "cssTheme": "",
   "showViewHeader": true,
   "showRibbon": true,
   "accentColor": "#7c3aed",
   "interfaceFontFamily": "",
-  "textFontFamily": "",
+  "textFontFamily": "Pixel Code,Fixedsys Excelsior",
   "monospaceFontFamily": "Clear Sans Medium",
   "baseFontSizeAction": true,
   "baseFontSize": 17,
