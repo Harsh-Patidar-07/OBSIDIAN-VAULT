@@ -16,3 +16,14 @@
 
 ---
 
+> In Motion in 2D, average velocity is :
+> $$v_{\text{avg}} = \sqrt{(v_{x,\text{avg}})^2 + (v_{y,\text{avg}})^2}$$
+
+
+---
+
+> In a single projectile motion questions, if angle game is played on a single projectile, we can use Triangle properties between Cos, Sin, Tan to get values from each other
+
+
+---
+
