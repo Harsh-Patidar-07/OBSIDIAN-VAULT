@@ -66,3 +66,8 @@ $$H_y' = \frac{u^2 \sin^2\alpha}{2g \cos^2\theta}$$
 
 ---
 
+> Watch out for graphs, make sure you are reading the graph correctly, cause many times question is about its area, not the lines
+
+
+---
+
