@@ -71,3 +71,11 @@ $$H_y' = \frac{u^2 \sin^2\alpha}{2g \cos^2\theta}$$
 
 ---
 
+> Angular Momentum in Projectile Motion : 
+> $$\vec{L}(t) = -\frac{1}{2} m g u \cos\theta \, t^2 \, \hat{k}$$
+
+
+---
+
+
+
