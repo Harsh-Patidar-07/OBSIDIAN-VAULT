@@ -26,3 +26,7 @@ $$\text{Moles of gas} = \frac{\text{Given Volume at STP}}{\text{Molar Volume at 
 
 ---
 
+- Under identical $T$ and $P$, equal volumes contain equal moles ($n_1 = n_2$).
+    
+- $$\frac{\text{Mass}_1}{M_1} = \frac{\text{Mass}_2}{M_2} $$
+---
