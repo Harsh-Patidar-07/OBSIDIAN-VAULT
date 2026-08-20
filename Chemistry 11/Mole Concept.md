@@ -30,3 +30,20 @@ $$\text{Moles of gas} = \frac{\text{Given Volume at STP}}{\text{Molar Volume at 
     
 - $$\frac{\text{Mass}_1}{M_1} = \frac{\text{Mass}_2}{M_2} $$
 ---
+
+> Molarity of Pure Water is : 55.5 M
+
+
+---
+
+Molarity = % d ( 10 ) / molar_mass
+
+
+---
+
+Semimolar = 0.5 M
+Decimolar = 0.1 M
+
+
+---
+
