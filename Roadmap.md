@@ -65,7 +65,7 @@ Rotation:
 
 # Chemistry (42 Days)
 
-- [ ] Mole Concept (2)
+- [x] Mole Concept (2)
 - [ ] Atomic Structure (1)
 - [ ] Periodic Table (1)
 - [ ] Chemical Bonding (2)
