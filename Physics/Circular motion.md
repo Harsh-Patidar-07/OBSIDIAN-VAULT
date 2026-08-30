@@ -26,11 +26,11 @@ Let $\theta$ be the angle made with the **lowest vertical point**:
 
 ## 2. Motion Classification Based on Bottom Velocity ($u$)
 
-|**Condition on u**|**Path / Motion Type**|**Key Physical Phenomenon**|
-|---|---|---|
-|**$0 < u \le \sqrt{2gR}$**|**Simple Oscillation**|Velocity becomes zero before or at the horizontal level ($\theta \le 90^\circ$). Tension never becomes zero ($T > 0$).|
-|**$\sqrt{2gR} < u < \sqrt{5gR}$**|**Leaves Circular Path (Projectile Motion)**|Tension drops to zero ($T = 0$) between $90^\circ < \theta < 180^\circ$ while velocity is still positive ($v > 0$). String slacks, bob executes projectile motion.|
-|**$u \ge \sqrt{5gR}$**|**Complete Full Loop**|Tension remains $\ge 0$ throughout the entire circle. $T \ge 0$ at the top ($\theta = 180^\circ$).|
+| **Condition on u**                | **Path / Motion Type**                       | **Key Physical Phenomenon**                                                                                                                                        |     |
+| --------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| **$0 < u \le \sqrt{2gR}$**        | **Simple Oscillation**                       | Velocity becomes zero before or at the horizontal level ($\theta \le 90^\circ$). Tension never becomes zero ($T > 0$).                                             |     |
+| **$\sqrt{2gR} < u < \sqrt{5gR}$** | **Leaves Circular Path (Projectile Motion)** | Tension drops to zero ($T = 0$) between $90^\circ < \theta < 180^\circ$ while velocity is still positive ($v > 0$). String slacks, bob executes projectile motion. |     |
+| **$u \ge \sqrt{5gR}$**            | **Complete Full Loop**                       | Tension remains $\ge 0$ throughout the entire circle. $T \ge 0$ at the top ($\theta = 180^\circ$).                                                                 |     |
 
 ## 3. Critical Values for String (Light String + Bob)
 
@@ -70,6 +70,28 @@ When the string slacks at angle $\theta$ (measured from the lowest point, $90^\c
     $$v_{\text{slack}} = \sqrt{-gR\cos\theta}$$
     
 - **After slacking:** Bob acts as a projectile launched at speed $v_{\text{slack}}$ at an angle of $(180^\circ - \theta)$ above the horizontal.
+
+
+---
+
+## Vertical Circular Motion (C.M.) of a Light Rod Pendulum
+
+- **No Slacking Issue:**
+    
+    - There is no issue of $T = 0$ because a rigid rod cannot slack (massless/light rod).
+        
+- **Condition to Complete the Circle:**
+    
+    - For $u \ge \sqrt{4gl} \longrightarrow$ **Completes full circle**
+        
+
+### **NOTE:**
+
+- For $u = \sqrt{4gl}$:
+    
+    - Velocity at the topmost point becomes $v = 0$.
+        
+    - Due to **inertia**, it crosses the top point and completes the circle.
 
 
 ---
