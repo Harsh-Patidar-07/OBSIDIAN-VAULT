@@ -8,3 +8,8 @@
 
 ---
 
+When calculating work down by a force, **always find Displacement first, keep this in mind**
+
+
+---
+
