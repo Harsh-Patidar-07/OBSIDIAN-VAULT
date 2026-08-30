@@ -14,8 +14,8 @@ Rotation:
 
 - [x] Motion in a Plane (2)
 - [ ] Units & Measurements (1)
-- [ ] Motion in 1D (2)
-- [ ] Newton's Laws of Motion (2)
+- [x] Motion in 1D (2)
+- [x] Newton's Laws of Motion (2)
 - [ ] Work, Energy & Power (2)
 - [ ] Center of Mass & Momentum (2)
 - [ ] Rotational Motion (3)
