@@ -40,7 +40,7 @@ Rotation:
 
 # Mathematics (40 Days)
 
-- [ ] Sets, Relations & Functions (1)
+- [x] Sets, Relations & Functions (1)
 - [ ] Quadratic Equations (2)
 - [ ] Sequence & Series (2)
 - [ ] Trigonometry (2)
