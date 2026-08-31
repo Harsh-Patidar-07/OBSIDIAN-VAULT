@@ -13,3 +13,9 @@ When calculating work down by a force, **always find Displacement first, keep th
 
 ---
 
+In questions, for gravity or any other force, always take the whole path till where that force does its work.
+
+
+---
+
+
