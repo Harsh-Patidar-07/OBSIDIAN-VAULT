@@ -46,7 +46,7 @@ Rotation:
 - [ ] Trigonometry (2)
 - [ ] Straight Lines (2)
 - [ ] Circles (2)
-- [ ] Permutations & Combinations (2)
+- [x] Permutations & Combinations (2)
 - [ ] Binomial Theorem (1)
 - [ ] Complex Numbers (2)
 - [ ] Matrices & Determinants (2)
