@@ -18,4 +18,11 @@ In questions, for gravity or any other force, always take the whole path till wh
 
 ---
 
+Todo 
+
+- [ ] Spring + Pulley questions
+
+
+---
+
 

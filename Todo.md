@@ -1,0 +1,3 @@
+- [ ] Pnc : DIVISORs and all that types
+- [ ] WET : Pulley + springs
+- [ ] 
