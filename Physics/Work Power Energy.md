@@ -25,4 +25,10 @@ Todo
 
 ---
 
+ $$F = -\frac{dU}{dx} \implies \vert{}F\vert{} = \vert{}\text{Slope of } U\text{-}x \text{ graph}\vert{}$$
+    
+- **Intuition:** The magnitude of the conservative force is directly given by the steepness (magnitude of the slope) of the potential energy graph. Flat slope means zero force; steep slope means large force.
+
+
+---
 
