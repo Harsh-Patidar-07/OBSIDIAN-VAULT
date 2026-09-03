@@ -96,3 +96,28 @@ $$T \propto \frac{r}{v} \quad \text{or Kepler's 3rd law: } T^2 \propto r^3 \impl
 
 ---
 
+### Total Number of Spectral lines 
+
+$$\text{Total lines} = \frac{\Delta n(\Delta n + 1)}{2}$$
+
+
+---
+
+### A good concept to remember
+
+- **Key Concept:** Energy absorbed minus ionization energy of the target atom gives the kinetic energy of the freed electron.
+    
+- **Intuition & Solution:**
+    
+    - Ionization Energy of $\text{Li}^{2+}$ ($Z=3, n=1$):
+        
+        $$\text{I.E.} = 13.6 \times 3^2 = 122.4 \text{ eV}$$
+        
+    - Ground state of H-atom ($Z=1, n=1$) has binding energy of $13.6 \text{ eV}$.
+        
+    - Kinetic energy of emitted electron:
+        
+        $$K = 122.4 - 13.6 = 108.8 \text{ eV} \approx 109 \text{ eV}$$
+
+---
+
