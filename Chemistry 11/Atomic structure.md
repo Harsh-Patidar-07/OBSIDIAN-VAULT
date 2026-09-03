@@ -1,3 +1,8 @@
+$$\begin{equation} TE = -KE = \frac{PE}{2} \end{equation}$$
+
+
+---
+
 ### Hydrogen Spectral Lines: Finding $n_2$
 
 Use the formula:
@@ -82,6 +87,12 @@ A "quantum of energy" simply means **one single photon**. Whenever an electron t
 
 $$\text{Binding Energy} = \frac{13.6 \times Z^2}{n^2}$$
 
+
+---
+
+#### Useful information in radius and time related questions
+
+$$T \propto \frac{r}{v} \quad \text{or Kepler's 3rd law: } T^2 \propto r^3 \implies T \propto r^{3/2}$$
 
 ---
 
