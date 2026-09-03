@@ -16,7 +16,7 @@ Rotation:
 - [ ] Units & Measurements (1)
 - [x] Motion in 1D (2)
 - [x] Newton's Laws of Motion (2)
-- [ ] Work, Energy & Power (2)
+- [x] Work, Energy & Power (2)
 - [ ] Center of Mass & Momentum (2)
 - [ ] Rotational Motion (3)
 - [ ] Gravitation (1)
