@@ -1,10 +1,10 @@
 {
-  "cssTheme": "Claude Paper",
+  "cssTheme": "",
   "showViewHeader": true,
   "showRibbon": true,
   "accentColor": "#7c3aed",
   "interfaceFontFamily": "",
-  "textFontFamily": "Clear Sans",
+  "textFontFamily": "Google Sans,Clear Sans",
   "monospaceFontFamily": "Clear Sans Medium",
   "baseFontSizeAction": true,
   "baseFontSize": 17,

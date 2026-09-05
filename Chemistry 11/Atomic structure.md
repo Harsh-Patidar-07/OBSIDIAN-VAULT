@@ -121,3 +121,23 @@ $$\text{Total lines} = \frac{\Delta n(\Delta n + 1)}{2}$$
 
 ---
 
+**Degeneracy** refers to the number of distinct quantum states (or orbitals) that share the exact same energy level. When multiple distinct states have the identical energy, that energy level is called **degenerate**, and the total count of those states is its **degree of degeneracy**.
+
+### Key Formulas for Hydrogen-Like Species
+
+For a hydrogen atom (or any single-electron system, like $\text{He}^+$, $\text{Li}^{2+}$):
+
+- **Energy depends only on $n$:** In single-electron systems (unlike multi-electron atoms), energy depends strictly on the principal quantum number $n$:
+    
+    $$E_n = -\frac{R_H}{n^2}$$
+    
+- **Degeneracy without spin (orbital degeneracy):**
+    
+    $$\text{Degeneracy} = n^2$$
+    
+- **Degeneracy with electron spin included (total states):** Since every orbital can hold 2 spin orientations ($m_s = \pm \frac{1}{2}$):
+    
+    $$\text{Degeneracy (including spin)} = 2n^2$$
+
+---
+
