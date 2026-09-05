@@ -20,9 +20,9 @@ If BITSAT asks for an arbitrary circular arc or sector of total angle $2\alpha$ 
     
     _(Put $\alpha = \pi/2$ for semicircular ring $\to \frac{2R}{\pi}$)_
     
-- **Circular Sector of angle $2\alpha$:**
+- **Circular Sector of angle $\alpha$:**
     
-    $$y_{cm} = \frac{2R \sin\alpha}{3\alpha}$$
+    $$y_{cm} = \frac{4R \sin(alpha/2)}{3\alpha}$$
     
     _(Put $\alpha = \pi/2$ for semicircular disc $\to \frac{4R}{3\pi}$)_
     
