@@ -45,3 +45,10 @@ Here, the constants are all zero, so $\Delta_x = \Delta_y = \Delta_z = 0$ is **a
 
 
 ---
+
+>You can never add 2 determinants first and then find the determinant of the summed one.
+>
+Always find the determinants individually then sum them.
+
+
+---
