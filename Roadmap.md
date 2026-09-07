@@ -49,7 +49,7 @@ Rotation:
 - [x] Permutations & Combinations (2)
 - [ ] Binomial Theorem (1)
 - [ ] Complex Numbers (2)
-- [ ] Matrices & Determinants (2)
+- [x] Matrices & Determinants (2)
 - [ ] Limits, Continuity & Differentiability (3)
 - [ ] Applications of Derivatives (3)
 - [ ] Indefinite Integration (2)
@@ -66,7 +66,7 @@ Rotation:
 # Chemistry (42 Days)
 
 - [x] Mole Concept (2)
-- [ ] Atomic Structure (1)
+- [x] Atomic Structure (1)
 - [ ] Periodic Table (1)
 - [ ] Chemical Bonding (2)
 - [ ] States of Matter (2)

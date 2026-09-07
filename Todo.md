@@ -1,3 +1,4 @@
 - [ ] Pnc : DIVISORs and all that types
 - [ ] WET : Pulley + springs
 - [ ] Atomic Structure : Lobes and visual diagram stuff
+- [ ] AM / GM inequality
