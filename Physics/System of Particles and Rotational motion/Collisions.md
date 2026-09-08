@@ -35,3 +35,10 @@ $$e = \frac{v_2 - v_1}{u_1 - u_2}$$
 
 ---
 
+### Collision with Floor
+
+![[Pasted image 20260908221011.png]]
+
+
+---
+
