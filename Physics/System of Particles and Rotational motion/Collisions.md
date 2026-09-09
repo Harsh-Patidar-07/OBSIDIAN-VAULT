@@ -42,3 +42,53 @@ $$e = \frac{v_2 - v_1}{u_1 - u_2}$$
 
 ---
 
+## Collision with Floor but at an Angle
+
+![[Pasted image 20260909224515.png]]
+
+
+---
+
+## Head on Collision
+
+![[Pasted image 20260909224825.png]]
+
+
+---
+
+## Special knowledge !
+
+![[Pasted image 20260909225114.png]]
+
+
+---
+
+## Oblique Collision
+
+![[Pasted image 20260909225413.png]]
+
+
+---
+
+## Special case in Oblique Collision
+
+![[Pasted image 20260909225439.png]]
+
+
+---
+
+## Rocket ( Variable Mass  concept )
+
+- **Thrust Force on a Rocket:**
+    
+    $$F_{\text{thrust}} = v_{\text{rel}} \left\vert{} \frac{dm}{dt} \right\vert{}$$
+    
+- **Rocket Velocity Equation (Tsiolkovsky):**
+    
+    $$v = u + v_{\text{rel}} \ln\left(\frac{m_0}{m}\right) - gt$$
+    
+    _(If gravity is neglected, drop the $gt$ term)._
+
+
+---
+
