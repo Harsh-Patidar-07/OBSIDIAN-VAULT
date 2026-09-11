@@ -94,7 +94,7 @@ $$e = \frac{v_2 - v_1}{u_1 - u_2}$$
 
 ## Reduced Mass concept for Spring problems
 
-![[Pasted image 20260911213924.png]]
+![[Pasted image 20260911220758.png]]
 
 
 ---
