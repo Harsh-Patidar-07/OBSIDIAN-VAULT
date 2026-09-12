@@ -3,4 +3,4 @@
 - [ ] Atomic Structure : Lobes and visual diagram stuff
 - [ ] AM / GM inequality
 - [ ] Classification of elements and Periodicity 
-- [ ] 
+- [ ] Collisions and COM
