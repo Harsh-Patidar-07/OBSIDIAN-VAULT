@@ -49,3 +49,10 @@ $$\tau_{\text{net}} = (T_2 - T_1)r = I\alpha$$
 
 ---
 
+### A good concept perhaps
+
+![[Pasted image 20260913223903.png]]
+
+
+---
+
