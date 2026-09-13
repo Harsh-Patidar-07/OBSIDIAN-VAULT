@@ -31,6 +31,21 @@ $$\tau_{\text{net}} = (T_2 - T_1)r = I\alpha$$
 
 ![[Pasted image 20260913220619.png]]
 
+![[Pasted image 20260913220924.png]]
+
+
+---
+
+## Angular Momentum
+
+![[Pasted image 20260913222127.png]]
+
+---
+
+## Conservation of Angular Momentum & Angular Impulse
+
+![[Pasted image 20260913223036.png]]
+
 
 ---
 
