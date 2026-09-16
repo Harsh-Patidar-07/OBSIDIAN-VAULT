@@ -4,3 +4,4 @@
 - [ ] AM / GM inequality
 - [ ] Classification of elements and Periodicity 
 - [ ] Collisions and COM
+- [ ] Rotational Motion
