@@ -13,3 +13,14 @@
 
 ---
 
+**Standard Formulas:**
+
+- Escape Velocity: $v_e = \sqrt{\frac{2GM}{R_e}}$
+    
+- Gravitational Potential Energy: $U(r) = -\frac{GMm}{r}$
+
+*When working in big distances and stuff, use Gravitational Potential energy, not " mgh "*
+
+---
+
+
