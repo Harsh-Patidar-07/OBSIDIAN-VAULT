@@ -28,3 +28,17 @@ This single determinant is the fastest computational route because computing a c
 
 ---
 
+### Angle : Acute / Obtuse
+
+- "Angle between $\vec{a}$ and $\vec{b}$ is acute" $\iff \vec{a} \cdot \vec{b} > 0$.
+    
+- "Angle between $\vec{b}$ and $y$-axis is obtuse" $\iff \vec{b} \cdot \hat{j} < 0$.
+
+
+---
+
+![[Pasted image 20260917172913.png]]
+
+
+---
+
