@@ -24,3 +24,25 @@
 ---
 
 
+**Fact to Remember:** This critical radius is known as the **Schwarzschild radius**, when a body is compressed so tightly that its escape velocity becomes " speed of light "
+
+
+---
+
+**Standard Formulas:**
+
+- $E_{\text{total}} = K_{\text{total}} + U_{\text{total}}$
+
+
+---
+
+### By Newton's Shell Theorem, the outer spherical shell exerts **zero gravitational force** anywhere in its interior cavity.
+
+
+---
+
+### "Fractional change" means $$\frac{\Delta g}{g} = \frac{g_h - g}{g}$$
+
+---
+
+
