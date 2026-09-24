@@ -40,5 +40,16 @@ This single determinant is the fastest computational route because computing a c
 ![[Pasted image 20260917172913.png]]
 
 
+
+---
+
+- **Standard Identities to Memorize:**
+    
+    1. $\text{Volume of tetrahedron} = \frac{1}{6}\vert{}[\vec{a} \ \vec{b} \ \vec{c}]\vert{}$
+        
+    2. $[\vec{a} + \vec{b} \quad \vec{b} + \vec{c} \quad \vec{c} + \vec{a}] = 2[\vec{a} \ \vec{b} \ \vec{c}]$
+        
+    3. $[\vec{a} \times \vec{b} \quad \vec{b} \times \vec{c} \quad \vec{c} \times \vec{a}] = [\vec{a} \ \vec{b} \ \vec{c}]^2$
+
 ---
 
