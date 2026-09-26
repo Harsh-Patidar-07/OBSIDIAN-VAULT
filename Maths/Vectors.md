@@ -53,3 +53,7 @@ This single determinant is the fastest computational route because computing a c
 
 ---
 
+$$\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c})\vec{b} - (\vec{a} \cdot \vec{b})\vec{c}$$
+
+---
+
