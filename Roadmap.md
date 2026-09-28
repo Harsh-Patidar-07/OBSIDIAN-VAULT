@@ -55,7 +55,7 @@ Rotation:
 - [ ] Indefinite Integration (2)
 - [ ] Definite Integration (2)
 - [ ] Differential Equations (2)
-- [ ] Vectors (2)
+- [x] Vectors (2)
 - [ ] 3D Geometry (2)
 - [ ] Probability (2)
 - [ ] Statistics (1)
