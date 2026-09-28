@@ -19,7 +19,7 @@ Rotation:
 - [x] Work, Energy & Power (2)
 - [ ] Center of Mass & Momentum (2)
 - [ ] Rotational Motion (3)
-- [ ] Gravitation (1)
+- [x] Gravitation (1)
 - [ ] Properties of Matter (2)
 - [ ] Thermodynamics (2)
 - [ ] Kinetic Theory (1)
