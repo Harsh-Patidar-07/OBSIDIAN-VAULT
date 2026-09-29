@@ -57,3 +57,13 @@ $$\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c})\vec{b} - (\v
 
 ---
 
+the property $\vert{}\mathbf{a} + \mathbf{b}\vert{}^2 = \vert{}\mathbf{a}\vert{}^2 + \vert{}\mathbf{b}\vert{}^2$ for mutually orthogonal vectors:
+
+
+---
+
+$$(\vec{a} \cdot \vec{b})\vec{b} = \vert{}\vec{b}\vert{}^2\vec{a} - \vec{b} \times (\vec{a} \times \vec{b})$$
+
+
+---
+
