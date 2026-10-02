@@ -67,3 +67,10 @@ $$(\vec{a} \cdot \vec{b})\vec{b} = \vert{}\vec{b}\vert{}^2\vec{a} - \vec{b} \tim
 
 ---
 
+The position vector of the centroid of $\Delta ABC$ is:
+
+$$\vec{G} = \frac{\vec{a} + \vec{b} + \vec{c}}{3}$$
+
+
+---
+
