@@ -3,6 +3,7 @@
 
 ---
 $$1\text{ cal} \approx 4.2\text{ J}$$
+$$R \approx 2\text{ cal/mol}\cdot\text{K}$$
 $$1\text{ bar}\cdot\text{m}^3 = 10^5\text{ J} = 100\text{ kJ}$$
 $$1\text{ atm} = 760\text{ torr}$$
 $$1\text{ J} = 10^7\text{ ergs}$$
@@ -43,6 +44,13 @@ $$w_1 = -P_{\text{ext}, 1}(V_2 - V_1)$$
 $$w_1 = -(2.0\text{ bar}) \times (16\text{ L} - 4.0\text{ L}) = -2.0 \times 12 = -24\text{ bar}\cdot\text{L}$$
 
 >The compression stops once the internal gas pressure reaches equilibrium with the external pressure
+
+---
+
+#### Intuition
+
+In any expansion from the same initial state to the same final volume, a reversible path maintains an opposing pressure that is as high as possible at every stage, thereby doing the maximum possible work ($\vert{}w_{\text{rev}}\vert{} > \vert{}w_{\text{irrev}}\vert{}$). Because the expansion is adiabatic ($q = 0$), all energy extracted as work comes directly from the thermal bank of internal energy ($\Delta U = w$). The reversible gas does more work, so its internal energy drops by a larger magnitude
+
 
 ---
 
