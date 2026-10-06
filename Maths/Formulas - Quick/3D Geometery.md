@@ -359,3 +359,26 @@ $$
 - Point to plane distance: $\left| \frac{ax_1 + by_1 + cz_1 + d}{\sqrt{a^2 + b^2 + c^2}} \right|$
 - Angle between line and plane: $\sin\theta = \left| \frac{aA + bB + cC}{\sqrt{a^2 + b^2 + c^2} \sqrt{A^2 + B^2 + C^2}} \right|$
 - Coplanarity: $(\vec{a}_2 - \vec{a}_1) \cdot (\vec{b}_1 \times \vec{b}_2) = 0$
+
+
+---
+
+# Important fact
+
+- Two planes $A_1 x + B_1 y + C_1 z = D_1$ and $A_2 x + B_2 y + C_2 z = D_2$ are:
+    
+    - **Parallel:** if $\frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_1}{C_2} \neq \frac{D_1}{D_2}$
+        
+    - **Identical (coincident):** if $\frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_1}{C_2} = \frac{D_1}{D_2}$
+
+---
+# Plane form
+
+**Standard Formula:**
+
+- Parametric plane: $\vec{r} = \vec{a} + \lambda\vec{b} + \mu\vec{c}$
+    
+- Scalar dot product form: $\vec{r}\cdot\vec{n} = \vec{a}\cdot\vec{n}$, where $\vec{n} = \vec{b} \times \vec{c}$
+
+---
+
