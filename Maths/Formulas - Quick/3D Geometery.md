@@ -392,3 +392,9 @@ For acute bisector, the signed distances have opposite signs:
 
 ---
 
+![[Pasted image 20261007224855.png]]![[Pasted image 20261007224910.png]]
+
+
+---
+
+![[Pasted image 20261007225302.png]]
