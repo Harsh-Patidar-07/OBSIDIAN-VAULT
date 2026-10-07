@@ -382,3 +382,13 @@ $$
 
 ---
 
+# Plane information
+
+For acute bisector, the signed distances have opposite signs:
+
+![[Pasted image 20261007220831.png]]
+![[Pasted image 20261007220847.png]]
+
+
+---
+
