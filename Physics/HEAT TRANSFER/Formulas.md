@@ -243,7 +243,7 @@ This is an approximate law, particularly useful when the temperature difference 
 ### 4.2 Convective Heat Transfer
 
 $$  
-\boxed{H = hA(T_{\text{surface}}-T_{\infty})}  
+\boxed{H = \frac{Q}T = hA(T_{\text{surface}}-T_{\infty})}  
 $$
 
 Total heat transferred when the rate is constant:
