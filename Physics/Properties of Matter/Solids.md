@@ -73,3 +73,10 @@ Whenever you multiply dimensions that expand independently:
 
 ---
 
+## Time period for osciallation of Spring
+
+![[Pasted image 20261009123726.png]]
+
+
+---
+
