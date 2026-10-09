@@ -398,3 +398,72 @@ For acute bisector, the signed distances have opposite signs:
 ---
 
 ![[Pasted image 20261007225302.png]]
+
+
+---
+
+# Line of Intersection of Two Planes
+
+## General Method
+
+Suppose the two planes are given by:
+$$a_1 x + b_1 y + c_1 z = d_1$$
+$$a_2 x + b_2 y + c_2 z = d_2$$
+
+Their respective normal vectors are:
+$$\vec{n}_1 = (a_1, b_1, c_1)$$
+$$\vec{n}_2 = (a_2, b_2, c_2)$$
+
+Since the line of intersection lies in both planes, its direction is perpendicular to both normal vectors. Therefore, the direction vector $\vec{d}$ is the cross product of the two normals:
+$$\vec{d} = \vec{n}_1 \times \vec{n}_2$$
+
+### Steps:
+1. **Direction Vector:** Find $\vec{d} = \vec{n}_1 \times \vec{n}_2$.
+2. **Point on Line:** Find a particular point $(x_0, y_0, z_0)$ satisfying both plane equations by setting one variable to a convenient value (usually $0$) and solving the resulting $2 \times 2$ system.
+3. **Form Equation of the Line:**
+   - **Vector Form:**
+     $$(x, y, z) = (x_0, y_0, z_0) + t(d_x, d_y, d_z)$$
+   - **Parametric Form:**
+     $$x = x_0 + t d_x, \quad y = y_0 + t d_y, \quad z = z_0 + t d_z$$
+   - **Symmetric Form:**
+     $$\frac{x - x_0}{d_x} = \frac{y - y_0}{d_y} = \frac{z - z_0}{d_z}$$
+
+---
+
+## Example
+
+Consider the two planes:
+$$P_1: x - y = 1$$
+$$P_2: z = 1$$
+
+### 1. Normal Vectors
+$$\vec{n}_1 = (1, -1, 0)$$
+$$\vec{n}_2 = (0, 0, 1)$$
+
+### 2. Direction Vector
+$$\vec{d} = \vec{n}_1 \times \vec{n}_2 = 
+\begin{vmatrix}
+\hat{\imath} & \hat{\jmath} & \hat{k} \\
+1 & -1 & 0 \\
+0 & 0 & 1
+\end{vmatrix}
+= (-1, -1, 0)$$
+
+Since direction vectors can be scaled by any non-zero scalar, this is parallel to:
+$$\vec{d} \parallel (1, 1, 0)$$
+
+### 3. Finding a Point on the Line
+From $P_2$, we have $z = 1$.  
+Set $y = 0$ in $P_1$:
+$$x - 0 = 1 \implies x = 1$$
+
+Thus, a point on the line is:
+$$(x_0, y_0, z_0) = (1, 0, 1)$$
+
+### 4. Equation of the Line
+- **Vector Form:**
+  $$(x, y, z) = (1, 0, 1) + t(1, 1, 0)$$
+
+
+---
+

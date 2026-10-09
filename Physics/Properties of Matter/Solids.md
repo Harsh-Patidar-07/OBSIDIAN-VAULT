@@ -56,7 +56,20 @@ Whenever you multiply dimensions that expand independently:
 
 ---
 
+# Wire hanging limit concept
+
+![[Pasted image 20261009121531.png]]
+![[Pasted image 20261009121550.png]]
 
 
 
+---
+
+## Wire as a spring
+![[Pasted image 20261009123544.png]]
+
+> Ignore del(L) for some reason
+
+
+---
 
