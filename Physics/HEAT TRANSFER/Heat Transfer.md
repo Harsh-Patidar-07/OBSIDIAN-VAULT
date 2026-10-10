@@ -26,3 +26,25 @@ The left end can be $100C$, the middle $50∘C$, and the right end $0∘C$.
 
 ---
 
+# Radiation
+
+By **Kirchhoff's Law of Thermal Radiation**, a good emitter of radiation is inherently an equally good absorber of radiation at thermal equilibrium
+
+![[Pasted image 20261010220032.png]]
+
+![[Pasted image 20261010220046.png]]
+
+![[Pasted image 20261010220114.png]]
+
+![[Pasted image 20261010220143.png]]
+![[Pasted image 20261010220202.png]]
+
+![[Pasted image 20261010220219.png]]
+
+![[Pasted image 20261010220354.png]]
+
+![[Pasted image 20261010220427.png]]
+
+
+---
+
