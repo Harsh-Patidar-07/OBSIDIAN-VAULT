@@ -45,6 +45,16 @@ By **Kirchhoff's Law of Thermal Radiation**, a good emitter of radiation is inhe
 
 ![[Pasted image 20261010220427.png]]
 
+![[Pasted image 20261010222812.png]]
+
+![[Pasted image 20261010223600.png]]
+
 
 ---
 
+# Newton Law of Cooling
+
+![[Pasted image 20261010224806.png]]
+![[Pasted image 20261010224951.png]]
+![[Pasted image 20261010224552.png]]
+![[Pasted image 20261010224606.png]]
