@@ -24,6 +24,13 @@ The left end can be $100C$, the middle $50∘C$, and the right end $0∘C$.
 
 ![[Pasted image 20261009223408.png]]
 
+# Important
+
+Steady state: temperatures at every point do not change with time, but heat flows steadily from hot to cold.
+Heat entering one layer = heat leaving that layer = heat entering the next layer, so
+
+> $$\frac{Q}t = \text{constant}$$
+
 ---
 
 # Radiation
@@ -55,6 +62,6 @@ By **Kirchhoff's Law of Thermal Radiation**, a good emitter of radiation is inhe
 # Newton Law of Cooling
 
 ![[Pasted image 20261010224806.png]]
-![[Pasted image 20261010224951.png]]
+![[Pasted image 20261011224646.png]]
 ![[Pasted image 20261010224552.png]]
 ![[Pasted image 20261010224606.png]]
