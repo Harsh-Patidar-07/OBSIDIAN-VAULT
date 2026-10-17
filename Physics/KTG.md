@@ -23,3 +23,10 @@ $$U = n \left(\frac{f}{2}\right) R T$$
 
 ---
 
+## Very important stuff 
+
+Refrigerator is inverse of Carnot Engine, formula of efficiency too
+
+
+---
+
