@@ -2,6 +2,11 @@ $$v_{\text{mean}} = \frac{\sum v_i}{N}$$
 
 $$v_{\text{rms}} = \sqrt{\frac{\sum v_i^2}{N}}= \sqrt{\frac{3RT}{M}} $$
 
+---
+
+### Efficiency Formula
+
+$$\eta = \frac{W_{\text{net}}}{Q_{\text{in}}} \times 100\%$$
 
 ---
 
@@ -11,6 +16,12 @@ The total internal energy of a non-reacting gas mixture is simply the sum of the
 
 $$U = n \left(\frac{f}{2}\right) R T$$
 
+
+---
+
+For any ideal gas, the molar heat capacity at constant pressure is strictly greater than at constant volume:
+
+$$C_p > C_v > 0$$
 
 ---
 
@@ -108,6 +119,55 @@ $$\Delta S_{\text{total}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundi
     
 
 _(Note: The entropy of a specific subsystem can decrease, e.g., $\Delta S_{\text{sys}} = -8\text{ J/K}$, but only if the surroundings gain at least that much entropy to ensure the net sum remains $\ge 0$.)_
+
+
+---
+
+**Kelvin-Planck Statement:** "It is impossible to construct an engine operating in a cycle whose sole effect is the extraction of heat from a single thermal reservoir and the complete conversion of that heat into mechanical work."
+
+
+---
+
+#### Three-Step Execution Checklist for Cyclic Problems
+
+1. **Identify Direction & Steps:** Label every leg ($A \to B$, $B \to C$, etc.) and check arrow direction.
+    
+2. **Flag the Sign of $Q$ for Each Leg:**
+    
+    - **Isochoric ($V = \text{const}$):** $Q = n C_v \Delta T = \frac{C_v}{R} V \Delta P$
+        
+        - $P \uparrow \implies Q > 0$ (**Input**)
+            
+        - $P \downarrow \implies Q < 0$ (**Rejected**)
+            
+    - **Isobaric ($P = \text{const}$):** $Q = n C_p \Delta T = \frac{C_p}{R} P \Delta V$
+        
+        - $V \uparrow \implies Q > 0$ (**Input**)
+            
+        - $V \downarrow \implies Q < 0$ (**Rejected**)
+            
+    - **Isothermal ($T = \text{const}$):** $Q = W = nRT \ln(V_f / V_i)$
+        
+        - Expansion $\implies Q > 0$ (**Input**)
+            
+        - Compression $\implies Q < 0$ (**Rejected**)
+            
+    - **Adiabatic:** $Q = 0$
+        
+3. **Filter Before Summing:**
+    
+    - If the question asks for **work** or **net heat** $\to$ take the enclosed loop area.
+        
+    - If the question asks for **heat required / supplied** $\to$ sum **only** the $Q > 0$ legs.
+        
+    - If the question asks for **efficiency ($\eta$)** $\to$ use $\eta = \frac{W_{\text{net}}}{Q_{\text{in}}}$, where the denominator is strictly the $Q > 0$ sum.
+
+
+---
+
+Compressibility ($\beta$) is the reciprocal of the bulk modulus ($B$) and represents the fractional decrease in volume per unit increase in pressure:
+
+$$\beta = \frac{1}{B} = -\frac{\Delta V}{V \cdot \Delta P}$$
 
 
 ---
