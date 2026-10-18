@@ -172,3 +172,52 @@ $$\beta = \frac{1}{B} = -\frac{\Delta V}{V \cdot \Delta P}$$
 
 ---
 
+**Process $A \to B$ (Isochoric heating at $V = V_0$):**
+
+$$Q_{AB} = n C_v \Delta T$$
+
+**Process $B \to C$ (Isobaric expansion at $P = 2p_0$):**
+
+$$Q_{BC} = n C_p \Delta T $$
+
+
+---
+
+### 1. The Universal Rule: $\Delta U$ Always Uses $C_v$
+
+For **any ideal gas** and for **any process whatsoever** (isochoric, isobaric, isothermal, adiabatic, or completely random):
+
+$$\Delta U = n C_v \Delta T$$
+
+- **Why?** Internal energy ($U$) of an ideal gas depends **only** on temperature ($T$).
+    
+- Even if pressure changes, volume changes, or both change: if temperature changes by $\Delta T$, internal energy changes by $n C_v \Delta T$.
+    
+- Never use $C_p$ to calculate $\Delta U$.
+    
+
+### 2. What Is $Q$? (Heat Depends on the Path)
+
+Heat ($Q$) is **path-dependent**. There is no single universal formula for $Q$; its formula changes depending on the process.
+
+From the First Law of Thermodynamics:
+
+$$Q = \Delta U + W$$
+
+Depending on the specific process:
+
+|**Process**|**Condition**|**Work Done (W)**|**Heat Exchanged (Q)**|
+|---|---|---|---|
+|**Isochoric**|$V = \text{constant}$|$W = 0$|$Q_V = \Delta U = \mathbf{n C_v \Delta T}$|
+|**Isobaric**|$P = \text{constant}$|$W = P\Delta V = nR\Delta T$|$Q_P = \Delta U + W = n(C_v + R)\Delta T = \mathbf{n C_p \Delta T}$|
+|**Isothermal**|$T = \text{constant}$|$W = nRT \ln\left(\frac{V_2}{V_1}\right)$|$Q = W \quad (\text{since } \Delta U = 0)$|
+|**Adiabatic**|Insulated / fast|$W = -\Delta U$|$Q = \mathbf{0}$|
+|**General / Polytropic**|$PV^x = \text{constant}$|$W = \frac{P_1 V_1 - P_2 V_2}{x - 1}$|$Q = n C \Delta T \quad \left(C = C_v + \frac{R}{1-x}\right)$|
+
+---
+## Carnot engine efficiency
+$$\eta = 1 - \frac{T_2}{T_1} = \frac{W}{Q_1}$$
+
+
+---
+

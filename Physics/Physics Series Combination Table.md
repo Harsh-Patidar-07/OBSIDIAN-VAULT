@@ -8,3 +8,8 @@
 | **Fluid Resistance to Laminar Flow ($R_f$)**<br><br>  <br><br>$\bullet$ $R_{f,\text{eq}} = R_{f1} + R_{f2}$<br><br>  <br><br>$\bullet$ Poiseuille's law: $\Delta P = Q R_f$ (Pressure heads add up for same flow rate $Q$) | **Electrical Conductance ($G$)**<br><br>  <br><br>$\bullet$ $\frac{1}{G_{\text{eq}}} = \frac{1}{G_1} + \frac{1}{G_2}$<br><br>  <br><br>$\bullet$ Where $G = \frac{1}{R}$                                                                                                       |
 | **Spring Compliance / Flexibility ($S = \frac{1}{k}$)**<br><br>  <br><br>$\bullet$ $S_{\text{eq}} = S_1 + S_2$<br><br>  <br><br>$\bullet$ Extension per unit force adds directly in series                                 | **Elastic Rods / Wires ($K = \frac{YA}{L}$)**<br><br>  <br><br>$\bullet$ $\frac{1}{K_{\text{eq}}} = \frac{1}{K_1} + \frac{1}{K_2}$<br><br>  <br><br>$\bullet$ Rods end-to-end behave identically to springs in series                                                          |
 | **Torsional Spring Compliance ($1/C_{\theta}$)**<br><br>  <br><br>$\bullet$ Angular twist per unit torque adds up: $\theta = \theta_1 + \theta_2$                                                                          | **Torsional Springs ($C_{\theta}$ or $k_t$)**<br><br>  <br><br>$\bullet$ $\frac{1}{C_{\theta,\text{eq}}} = \frac{1}{C_{\theta,1}} + \frac{1}{C_{\theta,2}}$<br><br>  <br><br>$\bullet$ Restoring torque $\tau$ is uniform along shafts in series                               |
+![[Pasted image 20261018232535.png]]
+
+
+---
+
