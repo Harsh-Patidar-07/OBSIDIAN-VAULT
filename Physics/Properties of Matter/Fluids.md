@@ -57,3 +57,19 @@ The crucial distinction is that pressure at a point depends on the liquid above 
 
 ---
 
+### In rotation questions of continous mass bodies 
+
+One important distinction: Knowing the total mass \(M\) is not enough by itself. You also need to know how that mass is distributed across different radii. The centre of mass conveniently accounts for that distribution.
+
+**Use Center of Mass even for liquids**
+
+
+---
+
+$$F_{\text{buoyant}}=\rho_{\text{liquid}}Vg$$
+
+This is Archimedes' principle. Buoyancy is the net result of pressure forces, not an extra force that exists separately from pressure.
+
+The core idea: You were right that oil pushes downward on the block's top. We don't ignore that force. It is already accounted for when we calculate the net buoyant force from the pressure difference between the bottom and top.
+
+---
