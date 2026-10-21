@@ -221,3 +221,12 @@ $$\eta = 1 - \frac{T_2}{T_1} = \frac{W}{Q_1}$$
 
 ---
 
+- $v_{\text{rms}} = \sqrt{\frac{3RT}{M}}$ (Chapter: _Kinetic Theory of Gases_)
+    
+- $v_{\text{sound}} = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma RT}{M}}$ (Chapter: _Waves_, Laplace correction)
+    
+- $\gamma = 1 + \frac{2}{f}$ (Chapter: _KTG_, Law of Equipartition of Energy)
+
+
+---
+
