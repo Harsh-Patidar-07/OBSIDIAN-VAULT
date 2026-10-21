@@ -32,4 +32,9 @@ $$\tan\theta = \frac{\text{net acceleration in horizontal direction from perspec
 
 ---
 
+### In liquid energy questions, Potential energy = mgh is taken for { m = center of mass } and { h = position of center of mass }
+
+
+---
+
 
