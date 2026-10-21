@@ -37,4 +37,23 @@ $$\tan\theta = \frac{\text{net acceleration in horizontal direction from perspec
 
 ---
 
+# Pressure ( also Force = PA ) on Side walls of a container
+
+The general method to remember
+
+For any hydrostatic force question involving a vertical wall:
+
+1. Find the pressure at the top and bottom of each section of the wall.
+    
+2. If pressure varies linearly, calculate its average using $$(\frac{P_{\text{top}}+P_{\text{bottom}}}{2})$$
+    
+3. Multiply average pressure by that section's area.
+    
+4. Add the forces from all sections.
+    
+
+The crucial distinction is that pressure at a point depends on the liquid above that point, but force on a wall depends on the pressure distribution over its entire area.
+
+
+---
 
