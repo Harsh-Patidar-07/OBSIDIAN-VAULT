@@ -73,3 +73,13 @@ This is Archimedes' principle. Buoyancy is the net result of pressure forces, no
 The core idea: You were right that oil pushes downward on the block's top. We don't ignore that force. It is already accounted for when we calculate the net buoyant force from the pressure difference between the bottom and top.
 
 ---
+
+# Plane questions
+
+The pressure difference between the lower and upper wing surfaces produces this lift:
+
+$$\Delta P=\frac{F_{\text{lift}}}{A} =\frac{mg}{A} $$
+
+
+---
+
