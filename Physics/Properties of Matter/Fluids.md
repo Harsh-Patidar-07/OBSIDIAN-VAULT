@@ -83,3 +83,75 @@ $$\Delta P=\frac{F_{\text{lift}}}{A} =\frac{mg}{A} $$
 
 ---
 
+## Thrust cause of hole on tank
+
+**Hydrodynamic Thrust Force:**
+
+The momentum carried away per second by the exiting jet gives rise to a horizontal reaction force (thrust) on the vessel:
+
+$$F_{\text{thrust}} = \frac{dp}{dt} = \dot{m} v = (\rho a v) v = \rho a v^2$$
+
+
+---
+
+## Surface Energy of a Drop
+
+$$U = T \cdot A_{\text{new}} $$
+
+
+---
+
+### Whenever solving question regarding bubbles :
+
+**Volume** is constant, **Surface area** changes
+
+
+---
+
+For self-sustained isothermal evaporation driven purely by the release of surface energy:
+
+$$dU \ge dQ$$
+
+
+---
+
+# Surface Tension and Beyond
+
+For a soap bubble of radius \(r\):
+
+$$\boxed{P_{\text{inside}}-P_{\text{outside}}=\frac{4T}{r}}$$
+
+
+---
+
+## The missing formula
+
+$$\boxed{Q=\frac{\pi r^4\Delta P}{8\eta L}}$$
+
+This is Poiseuille's law, for steady laminar flow of a viscous liquid through a cylindrical tube.
+
+- \(Q\): volume of liquid flowing per second
+    
+- \(r\): tube radius
+    
+- \(\Delta P\): pressure difference across the tube
+    
+- \(\eta\): liquid's viscosity
+    
+- \(L\): tube length
+
+---
+
+### The rule to remember
+
+|Situation|Increase in scale reading|
+|---|---|
+|Fully submerged, held by an external support|Weight of displaced liquid|
+|Fully submerged, resting on the tank bottom|Object's full weight|
+|Floating freely|Object's full weight|
+
+The underlying principle is simple: if the object is supported entirely by the tank-water system, the scale ultimately bears its full weight. If an external support carries some of the load, the scale doesn't have to.
+
+
+---
+
