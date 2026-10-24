@@ -164,3 +164,25 @@ $$r = \frac{r_1 r_2}{r_1 - r_2}$$
 
 ---
 
+## What does compressibility mean?
+
+Compressibility tells us how much a material's volume decreases when pressure increases.
+
+$$\boxed{\beta=\frac{\text{fractional decrease in volume}}{\text{increase in pressure}}}$$
+
+So,
+
+$$ \boxed{\frac{\Delta V}{V}=\beta\Delta P}$$
+
+
+---
+
+Surface tension tries to minimise the water film's surface area. When you pull the plates apart, you must overcome this attractive force.
+
+For a thin liquid film between two plates, there are two surfaces of the film. The force is
+
+$$\boxed{F=2\pi r^2\frac{T}{d}}$$
+
+
+---
+
