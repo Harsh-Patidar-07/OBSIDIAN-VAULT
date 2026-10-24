@@ -155,3 +155,12 @@ The underlying principle is simple: if the object is supported entirely by the t
 
 ---
 
+# Interface radius of 2 bubbles
+
+**The "interface radius" is just the curvature of the shared soapy wall stuck between two merged bubbles.**
+
+$$r = \frac{r_1 r_2}{r_1 - r_2}$$
+
+
+---
+
