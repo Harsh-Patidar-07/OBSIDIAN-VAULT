@@ -9,5 +9,6 @@
   },
   "strictLineBreaks": false,
   "showLineNumber": false,
-  "attachmentFolderPath": "./Attachments"
+  "attachmentFolderPath": "./Attachments",
+  "settingsPopoutWindow": true
 }

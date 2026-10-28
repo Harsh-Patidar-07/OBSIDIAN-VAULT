@@ -1,8 +1,8 @@
 {
-  "cssTheme": "Primary",
+  "cssTheme": "Another Nord",
   "showViewHeader": true,
   "showRibbon": true,
-  "accentColor": "#7c3aed",
+  "accentColor": "#3b4252",
   "interfaceFontFamily": "",
   "textFontFamily": "Google Sans,Clear Sans",
   "monospaceFontFamily": "Clear Sans Medium",
