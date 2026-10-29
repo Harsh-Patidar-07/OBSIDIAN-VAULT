@@ -1,0 +1,1324 @@
+/* ==========================================================================
+   Zencode — a clean, code-friendly theme for Obsidian
+   Default palette: GitHub Primer light + Atom One Dark (UI + syntax).
+   Zed Gruvbox and Zed One palettes are available via Style Settings.
+   ========================================================================== */
+
+/* @settings
+name: Zencode
+id: zen-theme
+settings:
+  - id: zen-palette
+    title: Color palette
+    type: class-select
+    allowEmpty: false
+    default: zen-palette-default
+    options:
+      - label: GitHub light + Atom One Dark
+        value: zen-palette-default
+      - label: GitHub (light / dark)
+        value: zen-palette-github
+      - label: Zed Gruvbox
+        value: zen-palette-gruvbox
+      - label: Zed One (One Light / One Dark)
+        value: zen-palette-one
+  - id: zen-sans-text
+    title: Sans-serif note text
+    description: Use a proportional font for notes instead of the monospace font
+    type: class-toggle
+    default: false
+  - id: zen-line-width
+    title: Readable line width
+    description: Max width of text when "Readable line length" is on
+    type: variable-number-slider
+    default: 800
+    min: 600
+    max: 1400
+    step: 20
+    format: px
+  - id: zen-code-size
+    title: Code font size
+    type: variable-number-slider
+    default: 0.875
+    min: 0.7
+    max: 1.1
+    step: 0.025
+    format: em
+  - id: zen-no-heading-border
+    title: Hide H1/H2 underline
+    type: class-toggle
+    default: false
+  - id: zen-no-code-border
+    title: Hide code block border
+    type: class-toggle
+    default: false
+  - id: zen-no-table-stripes
+    title: Disable zebra-striped tables
+    type: class-toggle
+    default: false
+  - id: zen-no-file-icons
+    title: Hide file explorer icons
+    type: class-toggle
+    default: false
+*/
+
+/* --------------------------------------------------------------------------
+   1. Shared tokens
+   -------------------------------------------------------------------------- */
+body {
+  --zen-font-sans: "Zed Plex Sans", "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  --zen-font-mono: "Lilex", "Zed Mono", "Zed Plex Mono", "IBM Plex Mono", ui-monospace,
+    "SF Mono", SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* Notes are written in the monospace font, like editing markdown in Zed */
+  --font-text-theme: var(--zen-font-mono);
+  --font-interface-theme: var(--zen-font-sans);
+  --font-monospace-theme: var(--zen-font-mono);
+
+  --file-line-width: var(--zen-line-width, 800px);
+  --zen-radius: 6px;
+
+  /* Headings */
+  --h1-size: 2em;
+  --h2-size: 1.5em;
+  --h3-size: 1.25em;
+  --h4-size: 1em;
+  --h5-size: 0.875em;
+  --h6-size: 0.85em;
+  --h1-weight: 600;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 600;
+  --h6-weight: 600;
+  --h1-line-height: 1.25;
+  --h2-line-height: 1.25;
+  --h3-line-height: 1.25;
+  --h4-line-height: 1.25;
+  --h5-line-height: 1.25;
+  --h6-line-height: 1.25;
+  --heading-spacing: 1.5em;
+  --inline-title-weight: 600;
+  --inline-title-size: 2em;
+
+  --p-spacing: 1rem;
+  --list-indent: 2em;
+  --list-spacing: 0.25em;
+  --list-bullet-size: 0.35em;
+
+  /* Code */
+  --code-size: var(--zen-code-size, 0.875em);
+  --code-radius: var(--zen-radius);
+
+  /* Blockquote — grey bar, muted text */
+  --blockquote-border-thickness: 4px;
+  --blockquote-background-color: transparent;
+  --blockquote-font-style: normal;
+
+  /* Rule */
+  --hr-thickness: 2px;
+
+  /* Links */
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: underline;
+
+  /* Tags as labels */
+  --tag-radius: 2em;
+  --tag-padding-x: 0.6em;
+  --tag-padding-y: 0.15em;
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+
+  /* Tables */
+  --table-border-width: 1px;
+  --table-header-weight: 600;
+
+  /* Checkboxes */
+  --checkbox-radius: 3px;
+  --checklist-done-decoration: none;
+
+  /* Callouts as alerts */
+  --callout-border-width: 0;
+  --callout-radius: 0 var(--zen-radius) var(--zen-radius) 0;
+  --callout-padding: 0.6em 1em;
+  --callout-title-weight: 600;
+}
+
+body.zen-sans-text {
+  --font-text-theme: var(--zen-font-sans);
+}
+
+/* --------------------------------------------------------------------------
+   2c. Light palette — Zed Gruvbox Light (optional)
+   -------------------------------------------------------------------------- */
+.theme-light.zen-palette-gruvbox {
+  --accent-h: 190;
+  --accent-s: 83%;
+  --accent-l: 26%;
+
+  --color-base-00: #fbf1c7;
+  --color-base-05: #f7ecc2;
+  --color-base-10: #f2e5bc;
+  --color-base-20: #ecddb4;
+  --color-base-25: #ddcca7;
+  --color-base-30: #c8b899;
+  --color-base-35: #bdae93;
+  --color-base-40: #a9a389;
+  --color-base-50: #897b6e;
+  --color-base-60: #7c6f64;
+  --color-base-70: #5f5650;
+  --color-base-100: #282828;
+
+  --background-primary: #fbf1c7;
+  --background-primary-alt: #f2e5bc;
+  --background-secondary: #ecddb4;
+  --background-secondary-alt: #d9c8a4;
+  --background-modifier-border: #c8b899;
+  --text-normal: #282828;
+  --text-muted: #5f5650;
+  --text-faint: #897b6e;
+
+  --zen-border-muted: #ddcca7;
+  --zen-inline-code-bg: rgba(200, 184, 153, 0.35);
+  --zen-bullet-color: #000000;
+  --zen-code-border: #ddcca7;
+
+  --text-selection: #0b66783d;
+  --text-highlight-bg: rgba(181, 118, 21, 0.2);
+  --hr-color: #ddcca7;
+  --blockquote-border-color: #c8b899;
+  --blockquote-color: var(--text-muted);
+  --table-border-color: #ddcca7;
+  --table-header-background: #ecddb4;
+  --table-row-alt-background: #f2e5bc;
+  --tag-background: rgba(11, 102, 120, 0.08);
+  --tag-background-hover: rgba(11, 102, 120, 0.14);
+  --tag-border-color: rgba(11, 102, 120, 0.25);
+
+  /* Syntax — Zed Gruvbox Light */
+  --zen-syn-text: #282828;
+  --zen-syn-comment: #7c6f64;
+  --zen-syn-keyword: #9d0006;
+  --zen-syn-string: #79740e;
+  --zen-syn-number: #8f3e71;
+  --zen-syn-constant: #b57613;
+  --zen-syn-property: #282828;
+  --zen-syn-attr: #0b6678;
+  --zen-syn-function: #79740e;
+  --zen-syn-type: #b57613;
+  --zen-syn-variable: #282828;
+  --zen-syn-tag: #427b58;
+  --zen-syn-selector: #b57613;
+  --zen-syn-regex: #af3a02;
+  --zen-syn-operator: #427b58;
+  --zen-syn-punctuation: #3c3836;
+  --zen-syn-inserted: #79740e;
+  --zen-syn-inserted-bg: rgba(121, 116, 14, 0.12);
+  --zen-syn-deleted: #9d0006;
+  --zen-syn-deleted-bg: rgba(157, 0, 6, 0.1);
+
+  /* Alert colors (r, g, b) */
+  --zen-c-blue: 11, 102, 120;
+  --zen-c-green: 121, 116, 14;
+  --zen-c-purple: 143, 62, 113;
+  --zen-c-yellow: 181, 118, 21;
+  --zen-c-red: 157, 3, 8;
+  --zen-c-gray: 124, 111, 100;
+  --zen-c-cyan: 66, 123, 88;
+}
+
+/* --------------------------------------------------------------------------
+   3c. Dark palette — Zed Gruvbox Dark (optional)
+   -------------------------------------------------------------------------- */
+.theme-dark.zen-palette-gruvbox {
+  --accent-h: 157;
+  --accent-s: 16%;
+  --accent-l: 58%;
+
+  --color-base-00: #282828;
+  --color-base-05: #2d2c2b;
+  --color-base-10: #32302f;
+  --color-base-20: #3a3735;
+  --color-base-25: #494340;
+  --color-base-30: #5b534d;
+  --color-base-35: #665c54;
+  --color-base-40: #7c6f64;
+  --color-base-50: #998b78;
+  --color-base-60: #a89984;
+  --color-base-70: #c5b597;
+  --color-base-100: #ebdbb2;
+
+  --background-primary: #282828;
+  --background-primary-alt: #32302f;
+  --background-secondary: #3a3735;
+  --background-secondary-alt: #4c4642;
+  --background-modifier-border: #5b534d;
+  --text-normal: #ebdbb2;
+  --text-muted: #c5b597;
+  --text-faint: #998b78;
+
+  --zen-border-muted: #494340;
+  --zen-inline-code-bg: rgba(91, 83, 77, 0.45);
+  --zen-bullet-color: #ebdbb2;
+  --zen-code-border: #494340;
+
+  --text-selection: #83a5983d;
+  --text-highlight-bg: rgba(250, 189, 46, 0.22);
+  --hr-color: #494340;
+  --blockquote-border-color: #5b534d;
+  --blockquote-color: var(--text-muted);
+  --table-border-color: #494340;
+  --table-header-background: #3a3735;
+  --table-row-alt-background: #2d2c2b;
+  --tag-background: rgba(131, 165, 152, 0.12);
+  --tag-background-hover: rgba(131, 165, 152, 0.2);
+  --tag-border-color: rgba(131, 165, 152, 0.3);
+
+  /* Syntax — Zed Gruvbox Dark */
+  --zen-syn-text: #ebdbb2;
+  --zen-syn-comment: #a89984;
+  --zen-syn-keyword: #fb4833;
+  --zen-syn-string: #b8bb25;
+  --zen-syn-number: #d3869b;
+  --zen-syn-constant: #fabd2e;
+  --zen-syn-property: #ebdbb2;
+  --zen-syn-attr: #83a598;
+  --zen-syn-function: #b8bb25;
+  --zen-syn-type: #fabd2e;
+  --zen-syn-variable: #ebdbb2;
+  --zen-syn-tag: #8ec07c;
+  --zen-syn-selector: #fabd2e;
+  --zen-syn-regex: #fe7f18;
+  --zen-syn-operator: #8ec07c;
+  --zen-syn-punctuation: #d5c4a1;
+  --zen-syn-inserted: #b8bb26;
+  --zen-syn-inserted-bg: rgba(184, 187, 38, 0.12);
+  --zen-syn-deleted: #fb4934;
+  --zen-syn-deleted-bg: rgba(251, 73, 52, 0.12);
+
+  --zen-c-blue: 131, 165, 152;
+  --zen-c-green: 184, 187, 38;
+  --zen-c-purple: 211, 134, 155;
+  --zen-c-yellow: 250, 189, 46;
+  --zen-c-red: 251, 73, 52;
+  --zen-c-gray: 168, 153, 132;
+  --zen-c-cyan: 142, 192, 124;
+}
+
+/* --------------------------------------------------------------------------
+   2a. Light palette — Zed One Light (optional)
+   -------------------------------------------------------------------------- */
+.theme-light.zen-palette-one {
+  --accent-h: 228;
+  --accent-s: 70%;
+  --accent-l: 62%;
+
+  --color-base-00: #fafafa;
+  --color-base-05: #f5f5f6;
+  --color-base-10: #f0f0f1;
+  --color-base-20: #ebebec;
+  --color-base-25: #dfdfe0;
+  --color-base-30: #c9c9ca;
+  --color-base-35: #bcbcbd;
+  --color-base-40: #a2a3a7;
+  --color-base-50: #7e8086;
+  --color-base-60: #6b6c70;
+  --color-base-70: #58585a;
+  --color-base-100: #242529;
+
+  --background-primary: #fafafa;
+  --background-primary-alt: #f0f0f1;
+  --background-secondary: #ebebec;
+  --background-secondary-alt: #dcdcdd;
+  --background-modifier-border: #c9c9ca;
+  --text-normal: #242529;
+  --text-muted: #58585a;
+  --text-faint: #7e8086;
+
+  --zen-border-muted: #dfdfe0;
+  --zen-inline-code-bg: rgba(201, 201, 202, 0.4);
+  --zen-bullet-color: #000000;
+  --zen-code-border: #dfdfe0;
+
+  --text-selection: #5c78e23d;
+  --text-highlight-bg: rgba(193, 132, 1, 0.18);
+  --hr-color: #dfdfe0;
+  --blockquote-border-color: #c9c9ca;
+  --blockquote-color: var(--text-muted);
+  --table-border-color: #dfdfe0;
+  --table-header-background: #ebebec;
+  --table-row-alt-background: #f0f0f1;
+  --tag-background: rgba(92, 120, 226, 0.08);
+  --tag-background-hover: rgba(92, 120, 226, 0.14);
+  --tag-border-color: rgba(92, 120, 226, 0.25);
+
+  /* Syntax — Zed One Light */
+  --zen-syn-text: #242529;
+  --zen-syn-comment: #a2a3a7;
+  --zen-syn-keyword: #a449ab;
+  --zen-syn-string: #649f57;
+  --zen-syn-number: #ad6e25;
+  --zen-syn-constant: #c18401;
+  --zen-syn-property: #d3604f;
+  --zen-syn-attr: #5c78e2;
+  --zen-syn-function: #5b79e3;
+  --zen-syn-type: #3882b7;
+  --zen-syn-variable: #d3604f;
+  --zen-syn-tag: #5c78e2;
+  --zen-syn-selector: #669f59;
+  --zen-syn-regex: #ad6e26;
+  --zen-syn-operator: #3882b7;
+  --zen-syn-punctuation: #4d4f52;
+  --zen-syn-inserted: #50a14f;
+  --zen-syn-inserted-bg: rgba(80, 161, 79, 0.12);
+  --zen-syn-deleted: #e45649;
+  --zen-syn-deleted-bg: rgba(228, 86, 73, 0.12);
+
+  /* Alert colors (r, g, b) */
+  --zen-c-blue: 92, 120, 226;
+  --zen-c-green: 100, 159, 87;
+  --zen-c-purple: 164, 73, 171;
+  --zen-c-yellow: 193, 132, 1;
+  --zen-c-red: 211, 96, 79;
+  --zen-c-gray: 126, 128, 134;
+  --zen-c-cyan: 56, 130, 183;
+}
+
+/* --------------------------------------------------------------------------
+   3a. Dark palette — Zed One Dark (optional)
+   -------------------------------------------------------------------------- */
+.theme-dark.zen-palette-one {
+  --accent-h: 211;
+  --accent-s: 72%;
+  --accent-l: 68%;
+
+  --color-base-00: #282c33;
+  --color-base-05: #2b3039;
+  --color-base-10: #2f343e;
+  --color-base-20: #2f343e;
+  --color-base-25: #363c46;
+  --color-base-30: #464b57;
+  --color-base-35: #4e5461;
+  --color-base-40: #5d636f;
+  --color-base-50: #878a98;
+  --color-base-60: #9a9fac;
+  --color-base-70: #a9afbc;
+  --color-base-100: #dce0e5;
+
+  --background-primary: #282c33;
+  --background-primary-alt: #2f343e;
+  --background-secondary: #2f343e;
+  --background-secondary-alt: #3b414d;
+  --background-modifier-border: #464b57;
+  --text-normal: #dce0e5;
+  --text-muted: #a9afbc;
+  --text-faint: #878a98;
+
+  --zen-border-muted: #363c46;
+  --zen-inline-code-bg: rgba(70, 75, 87, 0.5);
+  --zen-bullet-color: #dce0e5;
+  --zen-code-border: #363c46;
+
+  --text-selection: #74ade83d;
+  --text-highlight-bg: rgba(223, 193, 132, 0.25);
+  --hr-color: #363c46;
+  --blockquote-border-color: #464b57;
+  --blockquote-color: var(--text-muted);
+  --table-border-color: #363c46;
+  --table-header-background: #2f343e;
+  --table-row-alt-background: #2b3039;
+  --tag-background: rgba(116, 173, 232, 0.1);
+  --tag-background-hover: rgba(116, 173, 232, 0.18);
+  --tag-border-color: rgba(116, 173, 232, 0.3);
+
+  /* Syntax — Zed One Dark */
+  --zen-syn-text: #acb2be;
+  --zen-syn-comment: #5d636f;
+  --zen-syn-keyword: #b477cf;
+  --zen-syn-string: #a1c181;
+  --zen-syn-number: #bf956a;
+  --zen-syn-constant: #dfc184;
+  --zen-syn-property: #d07277;
+  --zen-syn-attr: #74ade8;
+  --zen-syn-function: #73ade9;
+  --zen-syn-type: #6eb4bf;
+  --zen-syn-variable: #d07277;
+  --zen-syn-tag: #74ade8;
+  --zen-syn-selector: #dfc184;
+  --zen-syn-regex: #bf956a;
+  --zen-syn-operator: #6eb4bf;
+  --zen-syn-punctuation: #b2b9c6;
+  --zen-syn-inserted: #98c379;
+  --zen-syn-inserted-bg: rgba(152, 195, 121, 0.12);
+  --zen-syn-deleted: #e06c75;
+  --zen-syn-deleted-bg: rgba(224, 108, 117, 0.12);
+
+  --zen-c-blue: 116, 173, 232;
+  --zen-c-green: 161, 193, 129;
+  --zen-c-purple: 180, 119, 207;
+  --zen-c-yellow: 223, 193, 132;
+  --zen-c-red: 208, 114, 119;
+  --zen-c-gray: 135, 138, 152;
+  --zen-c-cyan: 110, 180, 191;
+}
+
+/* --------------------------------------------------------------------------
+   2. Light palette — GitHub Primer light (default)
+   -------------------------------------------------------------------------- */
+.theme-light {
+  --accent-h: 212;
+  --accent-s: 92%;
+  --accent-l: 45%;
+
+  --color-base-00: #ffffff;
+  --color-base-05: #fbfcfd;
+  --color-base-10: #f6f8fa;
+  --color-base-20: #f6f8fa;
+  --color-base-25: #eff2f5;
+  --color-base-30: #d1d9e0;
+  --color-base-35: #c8d1da;
+  --color-base-40: #afb8c1;
+  --color-base-50: #818b98;
+  --color-base-60: #6e7781;
+  --color-base-70: #59636e;
+  --color-base-100: #1f2328;
+
+  --background-primary: #ffffff;
+  --background-primary-alt: #f6f8fa;
+  --background-secondary: #f6f8fa;
+  --background-secondary-alt: #eff2f5;
+  --background-modifier-border: #d1d9e0;
+  --text-normal: #1f2328;
+  --text-muted: #59636e;
+  --text-faint: #818b98;
+
+  --zen-border-muted: #d1d9e0b3;
+  --zen-inline-code-bg: rgba(129, 139, 152, 0.12);
+  --zen-bullet-color: #000000;
+  --zen-code-border: #d1d9e0b3;
+
+  --text-selection: rgba(9, 105, 218, 0.2);
+  --text-highlight-bg: #fff8c5;
+  --hr-color: #d1d9e0;
+  --blockquote-border-color: #d1d9e0;
+  --blockquote-color: var(--text-muted);
+  --table-border-color: #d1d9e0;
+  --table-header-background: #f6f8fa;
+  --table-row-alt-background: #f6f8fa;
+  --tag-background: rgba(9, 105, 218, 0.08);
+  --tag-background-hover: rgba(9, 105, 218, 0.14);
+  --tag-border-color: rgba(9, 105, 218, 0.2);
+
+  --zen-syn-text: #1f2328;
+  --zen-syn-comment: #59636e;
+  --zen-syn-keyword: #cf222e;
+  --zen-syn-string: #0a3069;
+  --zen-syn-number: #0550ae;
+  --zen-syn-constant: #0550ae;
+  --zen-syn-property: #0550ae;
+  --zen-syn-attr: #0550ae;
+  --zen-syn-function: #6639ba;
+  --zen-syn-type: #6639ba;
+  --zen-syn-variable: #953800;
+  --zen-syn-tag: #116329;
+  --zen-syn-selector: #6639ba;
+  --zen-syn-regex: #116329;
+  --zen-syn-operator: #1f2328;
+  --zen-syn-punctuation: #1f2328;
+  --zen-syn-inserted: #116329;
+  --zen-syn-inserted-bg: #dafbe1;
+  --zen-syn-deleted: #82071e;
+  --zen-syn-deleted-bg: #ffebe9;
+
+  --zen-c-blue: 9, 105, 218;
+  --zen-c-green: 26, 127, 55;
+  --zen-c-purple: 130, 80, 223;
+  --zen-c-yellow: 154, 103, 0;
+  --zen-c-red: 209, 36, 47;
+  --zen-c-gray: 89, 99, 110;
+  --zen-c-cyan: 27, 124, 131;
+}
+
+/* --------------------------------------------------------------------------
+   3. Dark palette — Atom One Dark (default)
+   Colors from atom/one-dark-syntax (colors.less / syntax-variables.less).
+   -------------------------------------------------------------------------- */
+.theme-dark {
+  --accent-h: 207;
+  --accent-s: 82%;
+  --accent-l: 66%;
+
+  --color-base-00: #21252b;
+  --color-base-05: #23272e;
+  --color-base-10: #262a31;
+  --color-base-20: #282c34;
+  --color-base-25: #2c313a;
+  --color-base-30: #3e4451;
+  --color-base-35: #4b5263;
+  --color-base-40: #5c6370;
+  --color-base-50: #636d83;
+  --color-base-60: #7f848e;
+  --color-base-70: #828997;
+  --color-base-100: #abb2bf;
+
+  --background-primary: #282c34;
+  --background-primary-alt: #21252b;
+  --background-secondary: #21252b;
+  --background-secondary-alt: #2c313a;
+  --background-modifier-border: #181a1f;
+  --text-normal: #abb2bf;
+  --text-muted: #828997;
+  --text-faint: #636d83;
+
+  --zen-border-muted: #3e4451;
+  --zen-inline-code-bg: rgba(62, 68, 81, 0.6);
+  --zen-bullet-color: #abb2bf;
+  --zen-code-border: #181a1f;
+
+  --text-selection: #3e4451;
+  --text-highlight-bg: rgba(229, 192, 123, 0.25);
+  --hr-color: #3e4451;
+  --blockquote-border-color: #3e4451;
+  --blockquote-color: var(--text-muted);
+  --table-border-color: #3e4451;
+  --table-header-background: #21252b;
+  --table-row-alt-background: #2c313a;
+  --tag-background: rgba(97, 175, 239, 0.1);
+  --tag-background-hover: rgba(97, 175, 239, 0.18);
+  --tag-border-color: rgba(97, 175, 239, 0.3);
+
+  /* Syntax — Atom One Dark */
+  --zen-syn-text: #abb2bf;
+  --zen-syn-comment: #5c6370;
+  --zen-syn-comment-style: italic;
+  --zen-syn-keyword: #c678dd;
+  --zen-syn-string: #98c379;
+  --zen-syn-number: #d19a66;
+  --zen-syn-constant: #d19a66;
+  --zen-syn-property: #e06c75;
+  --zen-syn-attr: #d19a66;
+  --zen-syn-function: #61afef;
+  --zen-syn-type: #e5c07b;
+  --zen-syn-builtin: #56b6c2;
+  --zen-syn-variable: #e06c75;
+  --zen-syn-tag: #e06c75;
+  --zen-syn-selector: #d19a66;
+  --zen-syn-regex: #56b6c2;
+  --zen-syn-operator: #56b6c2;
+  --zen-syn-punctuation: #abb2bf;
+  --zen-syn-inserted: #98c379;
+  --zen-syn-inserted-bg: rgba(152, 195, 121, 0.12);
+  --zen-syn-deleted: #e06c75;
+  --zen-syn-deleted-bg: rgba(224, 108, 117, 0.12);
+
+  --zen-c-blue: 97, 175, 239;
+  --zen-c-green: 152, 195, 121;
+  --zen-c-purple: 198, 120, 221;
+  --zen-c-yellow: 229, 192, 123;
+  --zen-c-red: 224, 108, 117;
+  --zen-c-gray: 130, 137, 151;
+  --zen-c-cyan: 86, 182, 194;
+}
+
+/* --------------------------------------------------------------------------
+   3b. Dark palette — GitHub Primer dark (optional)
+   -------------------------------------------------------------------------- */
+.theme-dark.zen-palette-github {
+  --accent-h: 213;
+  --accent-s: 93%;
+  --accent-l: 62%;
+
+  --color-base-00: #0d1117;
+  --color-base-05: #11161d;
+  --color-base-10: #151b23;
+  --color-base-20: #161b22;
+  --color-base-25: #212830;
+  --color-base-30: #3d444d;
+  --color-base-35: #474f58;
+  --color-base-40: #656c76;
+  --color-base-50: #6e7681;
+  --color-base-60: #8b949e;
+  --color-base-70: #9198a1;
+  --color-base-100: #e6edf3;
+
+  --background-primary: #0d1117;
+  --background-primary-alt: #151b23;
+  --background-secondary: #010409;
+  --background-secondary-alt: #151b23;
+  --background-modifier-border: #3d444d;
+  --text-normal: #e6edf3;
+  --text-muted: #9198a1;
+  --text-faint: #6e7681;
+
+  --zen-border-muted: #3d444db3;
+  --zen-inline-code-bg: rgba(101, 108, 118, 0.2);
+  --zen-bullet-color: #e6edf3;
+  --zen-code-border: #3d444db3;
+
+  --text-selection: rgba(56, 139, 253, 0.3);
+  --text-highlight-bg: rgba(187, 128, 9, 0.4);
+  --hr-color: #3d444d;
+  --blockquote-border-color: #3d444d;
+  --blockquote-color: var(--text-muted);
+  --table-border-color: #3d444d;
+  --table-header-background: #151b23;
+  --table-row-alt-background: #151b23;
+  --tag-background: rgba(68, 147, 248, 0.12);
+  --tag-background-hover: rgba(68, 147, 248, 0.2);
+  --tag-border-color: rgba(68, 147, 248, 0.3);
+
+  --zen-syn-text: #e6edf3;
+  --zen-syn-comment: #9198a1;
+  --zen-syn-keyword: #ff7b72;
+  --zen-syn-string: #a5d6ff;
+  --zen-syn-number: #79c0ff;
+  --zen-syn-constant: #79c0ff;
+  --zen-syn-property: #79c0ff;
+  --zen-syn-attr: #79c0ff;
+  --zen-syn-function: #d2a8ff;
+  --zen-syn-type: #d2a8ff;
+  --zen-syn-variable: #ffa657;
+  --zen-syn-tag: #7ee787;
+  --zen-syn-selector: #d2a8ff;
+  --zen-syn-regex: #7ee787;
+  --zen-syn-operator: #e6edf3;
+  --zen-syn-punctuation: #e6edf3;
+  --zen-syn-inserted: #aff5b4;
+  --zen-syn-inserted-bg: #033a16;
+  --zen-syn-deleted: #ffdcd7;
+  --zen-syn-deleted-bg: #67060c;
+
+  --zen-c-blue: 68, 147, 248;
+  --zen-c-green: 63, 185, 80;
+  --zen-c-purple: 171, 125, 248;
+  --zen-c-yellow: 210, 153, 34;
+  --zen-c-red: 248, 81, 73;
+  --zen-c-gray: 145, 152, 161;
+  --zen-c-cyan: 57, 197, 207;
+}
+
+/* Map the palette onto Obsidian's own variables (used by both modes,
+   canvas, embeds and plugins that respect the theme). */
+.theme-light,
+.theme-dark {
+  --code-background: var(--background-primary-alt);
+  --code-normal: var(--zen-syn-text);
+  --code-comment: var(--zen-syn-comment);
+  --code-keyword: var(--zen-syn-keyword);
+  --code-string: var(--zen-syn-string);
+  --code-value: var(--zen-syn-number);
+  --code-property: var(--zen-syn-property);
+  --code-function: var(--zen-syn-function);
+  --code-tag: var(--zen-syn-tag);
+  --code-important: var(--zen-syn-variable);
+  --code-operator: var(--zen-syn-operator);
+  --code-punctuation: var(--zen-syn-punctuation);
+
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent);
+  --link-external-color: var(--text-accent);
+  --link-external-color-hover: var(--text-accent);
+  --tag-color: var(--text-accent);
+  --tag-color-hover: var(--text-accent);
+  --tag-border-width: 1px;
+  --checklist-done-color: var(--text-normal);
+  --list-marker-color: var(--zen-bullet-color);
+  --list-marker-color-hover: var(--zen-bullet-color);
+  --list-marker-color-collapsed: var(--text-accent);
+  --h6-color: var(--text-muted);
+
+  --callout-default: var(--zen-c-blue);
+  --callout-info: var(--zen-c-blue);
+  --callout-todo: var(--zen-c-blue);
+  --callout-summary: var(--zen-c-cyan);
+  --callout-tip: var(--zen-c-green);
+  --callout-success: var(--zen-c-green);
+  --callout-question: var(--zen-c-yellow);
+  --callout-warning: var(--zen-c-yellow);
+  --callout-fail: var(--zen-c-red);
+  --callout-error: var(--zen-c-red);
+  --callout-bug: var(--zen-c-red);
+  --callout-example: var(--zen-c-purple);
+  --callout-quote: var(--zen-c-gray);
+}
+
+/* --------------------------------------------------------------------------
+   4. Body text
+   -------------------------------------------------------------------------- */
+.markdown-preview-view,
+.markdown-source-view {
+  --line-height-normal: 1.65;
+}
+
+.markdown-rendered strong,
+.cm-s-obsidian .cm-strong {
+  font-weight: 600;
+}
+
+/* Task lists sit tighter than regular lists */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line,
+.markdown-rendered li.task-list-item {
+  --list-spacing: 0;
+  --line-height-normal: 1.45;
+  line-height: var(--line-height-normal);
+}
+
+/* Bullets by depth, like GitHub: disc → circle → square, then repeat */
+.markdown-rendered ul {
+  list-style-type: disc;
+}
+
+.markdown-rendered ul ul,
+.markdown-rendered ol ul {
+  list-style-type: circle;
+}
+
+.markdown-rendered ul ul ul,
+.markdown-rendered ol ul ul {
+  list-style-type: square;
+}
+
+.markdown-rendered ul > li::marker {
+  color: var(--zen-bullet-color);
+}
+
+.markdown-rendered .list-bullet::after,
+.markdown-source-view.mod-cm6 .list-bullet::after {
+  background-color: var(--zen-bullet-color);
+  opacity: 1;
+}
+
+.markdown-rendered ul ul > li > .list-bullet::after,
+.markdown-rendered ol ul > li > .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-5 .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-8 .list-bullet::after {
+  content: "◦";
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--zen-bullet-color);
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.markdown-rendered ul ul > li::marker,
+.markdown-rendered ol ul > li::marker {
+  content: "◦  ";
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.markdown-rendered ul ul ul > li::marker,
+.markdown-rendered ol ul ul > li::marker {
+  content: normal;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.markdown-rendered ul ul ul > li > .list-bullet::after,
+.markdown-rendered ol ul ul > li > .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-6 .list-bullet::after {
+  background-color: var(--zen-bullet-color);
+  box-shadow: none;
+  border-radius: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Headings — underline H1/H2
+   -------------------------------------------------------------------------- */
+.markdown-rendered h1,
+.markdown-rendered h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--zen-border-muted);
+}
+
+/* In the editor the underline is a 1px background stripe drawn above the
+   line's bottom padding, so the gap below it lives inside the heading line
+   itself (margins or padding on neighbouring lines confuse CodeMirror). */
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-header-1,
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-header-2 {
+  --zen-heading-gap: 12px;
+  padding-bottom: calc(0.3em + var(--zen-heading-gap));
+  background-image: linear-gradient(var(--zen-border-muted), var(--zen-border-muted));
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 calc(100% - var(--zen-heading-gap));
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2 {
+  margin-bottom: 0.75em;
+}
+
+/* a little room between H3/H4 and what follows (code blocks, lists…) */
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-header-3,
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-header-4 {
+  padding-bottom: 8px;
+}
+
+.markdown-rendered h3,
+.markdown-rendered h4 {
+  margin-bottom: 0.6em;
+}
+
+body.zen-no-heading-border .markdown-rendered h1,
+body.zen-no-heading-border .markdown-rendered h2 {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+body.zen-no-heading-border .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1,
+body.zen-no-heading-border .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2 {
+  padding-bottom: 0;
+  background-image: none;
+}
+
+/* --------------------------------------------------------------------------
+   6. Inline code
+   -------------------------------------------------------------------------- */
+.markdown-rendered :not(pre) > code {
+  padding: 0.2em 0.4em;
+  border-radius: var(--zen-radius);
+  background-color: var(--zen-inline-code-bg);
+  color: var(--text-normal);
+}
+
+.markdown-source-view.mod-cm6 .cm-inline-code:not(.cm-formatting-code) {
+  background-color: var(--zen-inline-code-bg);
+  color: var(--text-normal);
+}
+
+.markdown-source-view.mod-cm6 .cm-formatting-code.cm-inline-code {
+  background-color: var(--zen-inline-code-bg);
+}
+
+/* --------------------------------------------------------------------------
+   7. Code blocks — reading mode
+   -------------------------------------------------------------------------- */
+.markdown-rendered pre {
+  padding: 10px 14px;
+  border: 1px solid var(--zen-code-border);
+  border-radius: var(--zen-radius);
+  background-color: var(--code-background);
+  line-height: 1.45;
+}
+
+.markdown-rendered pre code {
+  font-size: var(--code-size);
+  color: var(--zen-syn-text);
+}
+
+body.zen-no-code-border .markdown-rendered pre {
+  border-color: transparent;
+}
+
+.markdown-rendered button.copy-code-button {
+  margin: 6px;
+  padding: 4px 8px;
+  border: 1px solid var(--zen-code-border);
+  border-radius: var(--zen-radius);
+  background-color: var(--background-primary);
+  box-shadow: none;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+}
+
+.markdown-rendered button.copy-code-button:hover {
+  color: var(--text-normal);
+  background-color: var(--background-secondary-alt);
+}
+
+/* --------------------------------------------------------------------------
+   8. Code blocks — live preview / source (CodeMirror 6)
+   -------------------------------------------------------------------------- */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  border-left: 1px solid var(--zen-code-border);
+  border-right: 1px solid var(--zen-code-border);
+  line-height: 1.45;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin {
+  border-top: 1px solid var(--zen-code-border);
+  border-top-left-radius: var(--zen-radius);
+  border-top-right-radius: var(--zen-radius);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end {
+  border-bottom: 1px solid var(--zen-code-border);
+  border-bottom-left-radius: var(--zen-radius);
+  border-bottom-right-radius: var(--zen-radius);
+}
+
+/* Shrink the ``` fence lines while the cursor is elsewhere — they are
+   empty in live preview and otherwise add a full line of padding. */
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-codeblock-begin:not(.cm-active),
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-codeblock-end:not(.cm-active) {
+  font-size: 0.6em;
+  line-height: 1.2;
+}
+
+body.zen-no-code-border .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  border-color: transparent;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock-begin .cm-formatting-code-block,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock-end .cm-formatting-code-block,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock-begin .cm-hmd-codeblock {
+  color: var(--text-faint);
+}
+
+.markdown-source-view.mod-cm6 .code-block-flair {
+  color: var(--text-faint);
+  font-family: var(--font-monospace);
+  font-size: var(--font-ui-smaller);
+}
+
+.markdown-source-view.mod-cm6 .code-block-flair:hover {
+  color: var(--text-normal);
+}
+
+/* --------------------------------------------------------------------------
+   9. Syntax highlighting
+   Reading mode uses Prism (.token.*), the editor uses CodeMirror (.cm-*).
+   Both are mapped onto the same --zen-syn-* palette.
+   -------------------------------------------------------------------------- */
+
+/* comments */
+.markdown-rendered pre .token.comment,
+.markdown-rendered pre .token.prolog,
+.markdown-rendered pre .token.doctype,
+.markdown-rendered pre .token.cdata,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-comment,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-meta {
+  color: var(--zen-syn-comment);
+  font-style: var(--zen-syn-comment-style, normal);
+}
+
+/* keywords */
+.markdown-rendered pre .token.keyword,
+.markdown-rendered pre .token.atrule > .token.rule,
+.markdown-rendered pre .token.important,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-keyword {
+  color: var(--zen-syn-keyword);
+}
+
+/* strings */
+.markdown-rendered pre .token.string,
+.markdown-rendered pre .token.char,
+.markdown-rendered pre .token.attr-value,
+.markdown-rendered pre .token.url,
+.markdown-rendered pre .token.template-string,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-string,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-string-2 {
+  color: var(--zen-syn-string);
+}
+
+/* template literal interpolation goes back to normal text */
+.markdown-rendered pre .token.template-string .token.interpolation {
+  color: var(--zen-syn-text);
+}
+
+/* numbers, booleans, null */
+.markdown-rendered pre .token.number,
+.markdown-rendered pre .token.boolean,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-number,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-atom {
+  color: var(--zen-syn-number);
+}
+
+/* constants */
+.markdown-rendered pre .token.constant,
+.markdown-rendered pre .token.symbol,
+.markdown-rendered pre .token.entity {
+  color: var(--zen-syn-constant);
+}
+
+/* properties & object keys */
+.markdown-rendered pre .token.property,
+.markdown-rendered pre .token.key,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-property {
+  color: var(--zen-syn-property);
+}
+
+/* attributes, decorators */
+.markdown-rendered pre .token.attr-name,
+.markdown-rendered pre .token.decorator,
+.markdown-rendered pre .token.annotation,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-attribute,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-qualifier {
+  color: var(--zen-syn-attr);
+}
+
+/* functions & definitions */
+.markdown-rendered pre .token.function,
+.markdown-rendered pre .token.function-definition,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-def {
+  color: var(--zen-syn-function);
+}
+
+/* types & classes */
+.markdown-rendered pre .token.class-name,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-type,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-variable-3 {
+  color: var(--zen-syn-type);
+}
+
+/* builtins (console, print, len…) — own color only where a palette sets one */
+.markdown-rendered pre .token.builtin,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-builtin {
+  color: var(--zen-syn-builtin, var(--zen-syn-type));
+}
+
+/* variables, parameters */
+.markdown-rendered pre .token.variable,
+.markdown-rendered pre .token.parameter,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-variable-2 {
+  color: var(--zen-syn-variable);
+}
+
+/* markup tags */
+.markdown-rendered pre .token.tag,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-tag {
+  color: var(--zen-syn-tag);
+}
+
+.markdown-rendered pre .token.tag .token.punctuation {
+  color: var(--zen-syn-punctuation);
+}
+
+.markdown-rendered pre .token.tag .token.attr-name {
+  color: var(--zen-syn-attr);
+}
+
+/* CSS selectors */
+.markdown-rendered pre .token.selector {
+  color: var(--zen-syn-selector);
+}
+
+/* regex */
+.markdown-rendered pre .token.regex {
+  color: var(--zen-syn-regex);
+}
+
+/* operators */
+.markdown-rendered pre .token.operator,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-operator {
+  color: var(--zen-syn-operator);
+}
+
+/* punctuation & plain identifiers */
+.markdown-rendered pre .token.punctuation,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-punctuation,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-bracket {
+  color: var(--zen-syn-punctuation);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-variable {
+  color: var(--zen-syn-text);
+}
+
+/* diffs */
+.markdown-rendered pre .token.inserted,
+.markdown-rendered pre .token.prefix.inserted,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-positive {
+  color: var(--zen-syn-inserted);
+  background-color: var(--zen-syn-inserted-bg);
+}
+
+.markdown-rendered pre .token.deleted,
+.markdown-rendered pre .token.prefix.deleted,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-negative {
+  color: var(--zen-syn-deleted);
+  background-color: var(--zen-syn-deleted-bg);
+}
+
+.markdown-rendered pre .token.coord,
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-header {
+  color: var(--zen-syn-attr);
+  font-weight: 600;
+}
+
+.markdown-rendered pre .token.bold,
+.markdown-rendered pre .token.important {
+  font-weight: 600;
+}
+
+.markdown-rendered pre .token.italic {
+  font-style: italic;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-error {
+  color: var(--zen-syn-deleted);
+  text-decoration: underline wavy;
+}
+
+/* --------------------------------------------------------------------------
+   10. Blockquotes, rules, highlights, kbd
+   -------------------------------------------------------------------------- */
+.markdown-rendered blockquote {
+  padding: 0 1em;
+}
+
+.markdown-rendered hr {
+  margin: 1.5em 0;
+}
+
+.markdown-rendered mark,
+.markdown-source-view.mod-cm6 .cm-highlight {
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+  color: var(--text-normal);
+}
+
+.markdown-rendered kbd {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  border: 1px solid var(--background-modifier-border);
+  border-bottom-width: 2px;
+  border-radius: var(--zen-radius);
+  background-color: var(--background-primary-alt);
+  color: var(--text-normal);
+  font-family: var(--font-monospace);
+  font-size: 0.8em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* --------------------------------------------------------------------------
+   11. Tables
+   -------------------------------------------------------------------------- */
+.markdown-rendered th,
+.markdown-rendered td {
+  padding: 6px 13px;
+}
+
+body.zen-no-table-stripes {
+  --table-row-alt-background: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   12. Callouts — alert style
+   -------------------------------------------------------------------------- */
+.callout {
+  border-left: 4px solid rgb(var(--callout-color));
+  background-color: rgba(var(--callout-color), 0.06);
+}
+
+.callout-title {
+  color: rgb(var(--callout-color));
+}
+
+.callout-content {
+  color: var(--text-normal);
+}
+
+/* "important" is purple and "caution" is red, like GitHub alerts */
+.callout[data-callout="important"] {
+  --callout-color: var(--zen-c-purple);
+}
+
+.callout[data-callout="caution"],
+.callout[data-callout="danger"] {
+  --callout-color: var(--zen-c-red);
+}
+
+/* --------------------------------------------------------------------------
+   13. Misc details
+   -------------------------------------------------------------------------- */
+.markdown-rendered img {
+  border-radius: var(--zen-radius);
+}
+
+.markdown-rendered .footnotes {
+  color: var(--text-muted);
+  font-size: 0.875em;
+}
+
+.markdown-rendered a:hover,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
+.markdown-source-view.mod-cm6 .cm-url:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   14. File explorer icons (Lucide outlines, drawn as CSS masks)
+   -------------------------------------------------------------------------- */
+body {
+  --zen-icon-folder: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+  --zen-icon-folder-open: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+  --zen-icon-file: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3C/svg%3E");
+  --zen-icon-file-text: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M10 9H8'/%3E%3Cpath d='M16 13H8'/%3E%3Cpath d='M16 17H8'/%3E%3C/svg%3E");
+  --zen-icon-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='18' height='18' x='3' y='3' rx='2'/%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3Cpath d='m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21'/%3E%3C/svg%3E");
+  --zen-icon-canvas: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='7' height='9' x='3' y='3' rx='1'/%3E%3Crect width='7' height='5' x='14' y='3' rx='1'/%3E%3Crect width='7' height='9' x='14' y='12' rx='1'/%3E%3Crect width='7' height='5' x='3' y='16' rx='1'/%3E%3C/svg%3E");
+}
+
+.nav-folder-title-content::before,
+.nav-file-title-content::before {
+  content: "";
+  display: inline-block;
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+  vertical-align: -2px;
+  background-color: var(--text-muted);
+  -webkit-mask: var(--zen-icon) center / contain no-repeat;
+  mask: var(--zen-icon) center / contain no-repeat;
+}
+
+/* folders: open by default, closed when collapsed */
+.nav-folder-title-content {
+  --zen-icon: var(--zen-icon-folder-open);
+}
+
+.nav-folder.is-collapsed > .nav-folder-title .nav-folder-title-content {
+  --zen-icon: var(--zen-icon-folder);
+}
+
+/* files by extension */
+.nav-file-title-content {
+  --zen-icon: var(--zen-icon-file);
+}
+
+.nav-file-title[data-path$=".md" i] .nav-file-title-content {
+  --zen-icon: var(--zen-icon-file-text);
+}
+
+.nav-file-title[data-path$=".canvas" i] .nav-file-title-content {
+  --zen-icon: var(--zen-icon-canvas);
+}
+
+.nav-file-title:is(
+    [data-path$=".png" i],
+    [data-path$=".jpg" i],
+    [data-path$=".jpeg" i],
+    [data-path$=".gif" i],
+    [data-path$=".webp" i],
+    [data-path$=".svg" i],
+    [data-path$=".bmp" i],
+    [data-path$=".avif" i]
+  )
+  .nav-file-title-content {
+  --zen-icon: var(--zen-icon-image);
+}
+
+/* active file gets the accent color */
+.nav-file-title.is-active .nav-file-title-content::before {
+  background-color: var(--text-accent);
+}
+
+body.zen-no-file-icons .nav-folder-title-content::before,
+body.zen-no-file-icons .nav-file-title-content::before {
+  content: none;
+}
