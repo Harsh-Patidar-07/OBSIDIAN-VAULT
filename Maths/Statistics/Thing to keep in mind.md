@@ -26,9 +26,9 @@ $$\text{New Term} = 16 + (9 \times 1) = 25$$
 
 | Relationship  | Formula                      |
 | ------------- | ---------------------------- |
-| Q.D. and M.D. | \(QD \approx \frac{5}{6}MD\) |
-| S.D. and Q.D. | \(SD \approx \frac{3}{2}QD\) |
-| S.D. and M.D. | \(SD \approx \frac{5}{4}MD\) |
+| Q.D. and M.D. | $$QD \approx \frac{5}{6}MD$$ |
+| S.D. and Q.D. | $$SD \approx \frac{3}{2}QD$$ |
+| S.D. and M.D. | $$SD \approx \frac{5}{4}MD$$ |
 
 ---
 
