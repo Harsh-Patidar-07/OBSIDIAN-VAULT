@@ -39,6 +39,7 @@
 
 ![[Pasted image 20261031222226.png]]
 ![[Pasted image 20261031222258.png]]
+**![[Pasted image 20261031223811.png]]**
 
 ---
 
