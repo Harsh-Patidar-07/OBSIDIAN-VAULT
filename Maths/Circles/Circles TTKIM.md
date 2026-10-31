@@ -1,0 +1,14 @@
+For an equilateral triangle of side length $a$ inscribed in a circle of radius $R$:
+
+$$R = \frac{a}{\sqrt{3}} \implies a = R\sqrt{3}$$
+
+
+---
+
+**Image of a point $(x_1, y_1)$ in a line $ax + by + c = 0$:**
+
+$$\frac{x' - x_1}{a} = \frac{y' - y_1}{b} = -2\frac{a x_1 + b y_1 + c}{a^2 + b^2}$$
+
+
+---
+
