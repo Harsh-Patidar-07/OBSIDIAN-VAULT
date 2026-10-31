@@ -55,3 +55,32 @@ $$\boxed{\Delta=\frac12\left|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)\right|}$$
 
 ---
 
+**Harmonic Conjugates:** Points dividing a segment internally and externally in the same ratio form a harmonic division
+
+
+---
+
+
+# Reflection of a point
+
+Reflection across a general line
+For a point $P(x_1,y_1)$ and a mirror line
+
+$$
+ax+by+c=0
+$$
+
+its reflected point $P'(x_2,y_2)$ is:
+
+$$
+\boxed{x_2=x_1-\frac{2a(ax_1+by_1+c)}{a^2+b^2}}
+$$
+
+$$
+\boxed{y_2=y_1-\frac{2b(ax_1+by_1+c)}{a^2+b^2}}
+$$
+
+
+---
+
+
