@@ -34,9 +34,6 @@
 | Family of lines        | $L_1+\lambda L_2=0$                                                |
 
 
----
-
-
 
 ---
 
