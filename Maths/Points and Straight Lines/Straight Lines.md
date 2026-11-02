@@ -14,24 +14,25 @@
 
 ### Straight lines: all formulas
 
-| Concept                | Formula                                                            |
-| ---------------------- | ------------------------------------------------------------------ |
-| Slope                  | $m=\frac{y_2-y_1}{x_2-x_1}$                                        |
-| Slope-angle relation   | $m=\tan\theta$                                                     |
-| Slope-intercept        | $y=mx+c$                                                           |
-| Point-slope            | $y-y_1=m(x-x_1)$                                                   |
-| Two-point              | $\frac{y-y_1}{y_2-y_1}=\frac{x-x_1}{x_2-x_1}$                      |
-| Intercept              | $\frac xa+\frac yb=1$                                              |
-| General                | $Ax+By+C=0$                                                        |
-| Slope of general line  | $-A/B$                                                             |
-| Parallel lines         | $m_1=m_2$                                                          |
-| Perpendicular lines    | $m_1m_2=-1$                                                        |
-| Angle between lines    | $\tan\theta=\left\lvert\frac{m_1-m_2}{1+m_1m_2}\right\rvert$       |
-| Point-line distance    | $\frac{\lvert Ax_1+By_1+C\rvert}{\sqrt{A^2+B^2}}$                  |
-| Parallel-line distance | $\frac{\lvert C_1-C_2\rvert}{\sqrt{A^2+B^2}}$                      |
-| Normal form            | $x\cos\alpha+y\sin\alpha=p$                                        |
-| Angle bisectors        | $\frac{L_1}{\sqrt{A_1^2+B_1^2}}=\pm\frac{L_2}{\sqrt{A_2^2+B_2^2}}$ |
-| Family of lines        | $L_1+\lambda L_2=0$                                                |
+| Concept                       | Formula                                                            |
+| ----------------------------- | ------------------------------------------------------------------ |
+| Slope                         | $m=\frac{y_2-y_1}{x_2-x_1}$                                        |
+| Slope-angle relation          | $m=\tan\theta$                                                     |
+| Slope-intercept               | $y=mx+c$                                                           |
+| Point-slope                   | $y-y_1=m(x-x_1)$                                                   |
+| Two-point                     | $\frac{y-y_1}{y_2-y_1}=\frac{x-x_1}{x_2-x_1}$                      |
+| Intercept                     | $\frac xa+\frac yb=1$                                              |
+| General                       | $Ax+By+C=0$                                                        |
+| Slope of general line         | $-A/B$                                                             |
+| Parallel lines                | $m_1=m_2$                                                          |
+| Perpendicular lines           | $m_1m_2=-1$                                                        |
+| Angle between lines           | $\tan\theta=\left\lvert\frac{m_1-m_2}{1+m_1m_2}\right\rvert$       |
+| Point-line distance           | $\frac{\lvert Ax_1+By_1+C\rvert}{\sqrt{A^2+B^2}}$                  |
+| Parallel-line distance        | $\frac{\lvert C_1-C_2\rvert}{\sqrt{A^2+B^2}}$                      |
+| Normal form                   | $x\cos\alpha+y\sin\alpha=p$                                        |
+| Angle bisectors               | $\frac{L_1}{\sqrt{A_1^2+B_1^2}}=\pm\frac{L_2}{\sqrt{A_2^2+B_2^2}}$ |
+| Family of lines               | $L_1+\lambda L_2=0$                                                |
+| **Condition of Concurrency:** | The determinant of coefficients must equal 0.                      |
 
 **Standard Formula for Area of a Parallelogram bounded by lines:** For the four lines:$L_1: a_1 x + b_1 y + c_1 = 0$$L_2: a_1 x + b_1 y + c_2 = 0$$L_3: a_2 x + b_2 y + d_1 = 0$$L_4: a_2 x + b_2 y + d_2 = 0$
 
@@ -42,6 +43,13 @@ $$\text{Area} = \left\vert{} \frac{(c_1 - c_2)(d_1 - d_2)}{a_1 b_2 - a_2 b_1} \r
 ![[Pasted image 20261031222226.png]]
 ![[Pasted image 20261031222258.png]]
 **![[Pasted image 20261031223811.png]]**
+
+
+- **Acute vs. Obtuse Bisector Rule via Angle with a Line:** If $\theta$ is the angle between a line and one of its angle bisectors:
+    
+    - If $\vert{}\tan\theta\vert{} < 1 \implies \theta < 45^\circ$, the bisector is the **acute angle bisector**.
+        
+    - If $\vert{}\tan\theta\vert{} > 1 \implies \theta > 45^\circ$, the bisector is the **obtuse angle bisector**.
 
 ---
 
