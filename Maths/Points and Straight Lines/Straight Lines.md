@@ -33,7 +33,9 @@
 | Angle bisectors        | $\frac{L_1}{\sqrt{A_1^2+B_1^2}}=\pm\frac{L_2}{\sqrt{A_2^2+B_2^2}}$ |
 | Family of lines        | $L_1+\lambda L_2=0$                                                |
 
+**Standard Formula for Area of a Parallelogram bounded by lines:** For the four lines:$L_1: a_1 x + b_1 y + c_1 = 0$$L_2: a_1 x + b_1 y + c_2 = 0$$L_3: a_2 x + b_2 y + d_1 = 0$$L_4: a_2 x + b_2 y + d_2 = 0$
 
+$$\text{Area} = \left\vert{} \frac{(c_1 - c_2)(d_1 - d_2)}{a_1 b_2 - a_2 b_1} \right\vert{}$$
 
 ---
 
