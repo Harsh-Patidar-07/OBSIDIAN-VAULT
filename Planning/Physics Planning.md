@@ -2,6 +2,7 @@
 - [ ] Rotation and Collision
 - [ ] Units and Measurements
 - [ ] Constants to remember
+- [ ] SHM
 
 | Chapter                | Days to give         |
 | ---------------------- | -------------------- |

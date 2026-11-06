@@ -1,5 +1,5 @@
-- [ ] Circles
-- [ ] Straight lines
+- [x] Circles
+- [x] Straight lines
 - [ ] Sequence and Series
 - [ ] Complex Numbers ( basic good questions )
 - [ ] Quadratic equations ( 1.5 day Special )
