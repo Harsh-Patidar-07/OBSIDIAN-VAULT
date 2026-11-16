@@ -122,3 +122,56 @@ _(Charge is distributed uniformly throughout the entire volume)_
 ---
 
 
+# A important question with concept
+
+> Three large parallel plates have uniform surface charge densities as shown in the figure (top plate at $z = a$ has $+\sigma$, middle plate at $z = -a$ has $-2\sigma$, bottom plate at $z = -2a$ has $-\sigma$; point P lies between the top and middle plates). Find out electric field intensity at point P.
+
+![[Pasted image 20261116144042.png]]
+
+> - **(A)** $-\frac{4\sigma}{\varepsilon_0}\hat{k}$
+>     
+> - **(B)** $\frac{4\sigma}{\varepsilon_0}\hat{k}$
+>     
+> - **(C)** $-\frac{2\sigma}{\varepsilon_0}\hat{k}$
+>     
+> - **(D)** $\frac{2\sigma}{\varepsilon_0}\hat{k}$
+>     
+
+- **Concept:** An infinite charged sheet produces a **uniform** electric field $\frac{\vert{}\sigma\vert{}}{2\varepsilon_0}$ that does **not depend on distance** from the sheet—it points away from positive sheets and toward negative sheets. Note carefully that these are **thin charged plates/sheets** (given single surface charge density $\sigma$ per sheet), so each sheet contributes $\frac{\sigma}{2\varepsilon_0}$.
+    
+- **Standard Formula:**
+    
+    $$E_{\text{sheet}} = \frac{\vert{}\sigma\vert{}}{2\varepsilon_0}$$
+    
+- **Step-by-Step Solution:**
+    
+    1. Point P lies **below** the top plate ($+\sigma$) and **above** the middle ($-2\sigma$) and bottom ($-\sigma$) plates. The unit vector $\hat{k}$ points upward ($+z$).
+        
+    2. **Field due to top plate ($+\sigma$, above P):**
+        
+        - Positive sheet pushes away (downward, $-\hat{k}$):
+            
+            $$\vec{E}_1 = -\frac{\sigma}{2\varepsilon_0}\hat{k}$$
+            
+    3. **Field due to middle plate ($-2\sigma$, below P):**
+        
+        - Negative sheet pulls toward itself (downward, $-\hat{k}$):
+            
+            $$\vec{E}_2 = -\frac{2\sigma}{2\varepsilon_0}\hat{k}$$
+            
+    4. **Field due to bottom plate ($-\sigma$, below P):**
+        
+        - Negative sheet pulls toward itself (downward, $-\hat{k}$):
+            
+            $$\vec{E}_3 = -\frac{\sigma}{2\varepsilon_0}\hat{k}$$
+            
+    5. **Add all three vectors at P:**
+        
+        $$\vec{E}_P = \vec{E}_1 + \vec{E}_2 + \vec{E}_3 = \left(-\frac{\sigma}{2\varepsilon_0} - \frac{2\sigma}{2\varepsilon_0} - \frac{\sigma}{2\varepsilon_0}\right)\hat{k} = -\frac{4\sigma}{2\varepsilon_0}\hat{k} = -\frac{2\sigma}{\varepsilon_0}\hat{k}$$
+        
+- **Correct Option:** **(C)**
+
+
+---
+
+

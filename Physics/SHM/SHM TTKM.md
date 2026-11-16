@@ -35,3 +35,8 @@ This is a standard result worth keeping in your BITSAT formula notes.
 ---
 
 
+- **Ideal SHM (Theoretical):** Assumes zero friction or air resistance. The amplitude stays constant forever, and the object never permanently stops at the midpoint.
+- **Damped Oscillatory Motion (Real-World):** Includes friction/drag. The amplitude decays exponentially over time, and the object eventually stops at the midpoint \(m\). (Examples: a real pendulum swinging in air, a plucked guitar string fading out, or a car bouncing once or twice after hitting a speed bump).
+
+---
+
