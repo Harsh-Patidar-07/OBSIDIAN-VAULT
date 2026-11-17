@@ -174,4 +174,39 @@ _(Charge is distributed uniformly throughout the entire volume)_
 
 ---
 
+# Partial derivation of Potential to get Electric field
+
+Assume coeff's of y and z as constants ( basically 0 ) when differentiating wrt x 
+
+**Standard Formulas:**
+
+$$E_x = -\frac{\partial V}{\partial x}, \qquad E_y = -\frac{\partial V}{\partial y}, \qquad E_z = -\frac{\partial V}{\partial z}$$
+
+$$\vert{}\vec{E}\vert{} = \sqrt{E_x^2 + E_y^2 + E_z^2}$$
+
+
+---
+
+# Nice concept of Perpendicular to electric field
+
+**Concept:** Moving **perpendicular** to an electric field requires zero electrostatic work, meaning every line perpendicular to $\vec{E}$ is an **equipotential line** ($\Delta V = 0$).
+
+
+---
+
+![[Pasted image 20261117135538.png]]![[Pasted image 20261117135551.png]]![[Pasted image 20261117135610.png]]![[Pasted image 20261117135620.png]]
+
+
+---
+
+- **Concept:** A 2D vector field $\vec{E} = E_x\hat{i} + E_y\hat{j}$ is conservative only if $\frac{\partial E_x}{\partial y} = \frac{\partial E_y}{\partial x}$ (meaning it can be derived from a potential function $V$). Also, the differential equation of a field line is $\frac{dy}{dx} = \frac{E_y}{E_x}$.
+    
+- **Standard Formulas:**
+    
+    - Conservative condition: $\frac{\partial E_x}{\partial y} = \frac{\partial E_y}{\partial x}$
+        
+    - Equation of field lines: $\frac{dy}{dx} = \frac{E_y}{E_x}$
+
+
+---
 
