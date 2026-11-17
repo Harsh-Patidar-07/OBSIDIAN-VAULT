@@ -102,11 +102,11 @@ When a dielectric slab of constant $K$ is inserted into a parallel plate capacit
 
 _(All three behave identically because 100% of the charge sits on the outer surface)_
 
-|**Position**|**Electric Field (E)**|**Electric Potential (V)**|**What Stays Constant / Key Note**|
-|---|---|---|---|
-|**Inside** ($r < R$)|$0$|$\frac{kQ}{R}$|**$E$ is zero**; **$V$ stays constant** everywhere inside at the surface value.|
-|**Surface** ($r = R$)|$\frac{kQ}{R^2}$|$\frac{kQ}{R}$|**Maximum** value for both $E$ and $V$.|
-|**Outside** ($r > R$)|$\frac{kQ}{r^2}$|$\frac{kQ}{r}$|Behaves like a point charge at the center ($E \propto \frac{1}{r^2}$, $V \propto \frac{1}{r}$).|
+| **Position**          | **Electric Field (E)** | **Electric Potential (V)** | **What Stays Constant / Key Note**                                                              |
+| --------------------- | ---------------------- | -------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Inside** ($r < R$)  | $0$                    | $\frac{kQ}{R}$             | **$E$ is zero**; **$V$ stays constant** everywhere inside at the surface value.                 |
+| **Surface** ($r = R$) | $\frac{kQ}{R^2}$       | $\frac{kQ}{R}$             | **Maximum** value for both $E$ and $V$.                                                         |
+| **Outside** ($r > R$) | $\frac{kQ}{r^2}$       | $\frac{kQ}{r}$             | Behaves like a point charge at the center ($E \propto \frac{1}{r^2}$, $V \propto \frac{1}{r}$). |
 
 ### Table 2: Non-Conducting Solid Sphere
 
@@ -206,6 +206,50 @@ $$\vert{}\vec{E}\vert{} = \sqrt{E_x^2 + E_y^2 + E_z^2}$$
     - Conservative condition: $\frac{\partial E_x}{\partial y} = \frac{\partial E_y}{\partial x}$
         
     - Equation of field lines: $\frac{dy}{dx} = \frac{E_y}{E_x}$
+
+
+---
+
+# Dipole concept
+
+> Four charges are placed each at a distance $a$ from origin (top $+3q$ at $(0, a)$, bottom $+q$ at $(0, -a)$, left $-2q$ at $(-a, 0)$, right $-2q$ at $(a, 0)$). The dipole moment of configuration is:
+> 
+> - **(A)** $2qa\hat{j}$
+>     
+> - **(B)** $3qa\hat{j}$
+>     
+> - **(C)** $2qa[\hat{i} + \hat{j}]$
+>     
+> - **(D)** None
+>     
+
+- **Concept:** For any neutral system of charges (notice $+3q + q - 2q - 2q = 0$), the net electric dipole moment is simply the vector sum $\vec{p} = \sum q_i \vec{r}_i$ (or equivalently, we can split $+3q$ into $+2q + q$ and pair up opposite charges into standard dipoles pointing from negative to positive!).
+    
+- **Standard Formula:**
+    
+    $$\vec{p} = \sum q_i \vec{r}_i$$
+    
+- **Step-by-Step Solution:**
+    
+    1. Write the position vector $\vec{r}_i$ of each charge from the origin:
+        
+        - Top charge ($+3q$): $\vec{r}_1 = +a\hat{j}$
+            
+        - Bottom charge ($+q$): $\vec{r}_2 = -a\hat{j}$
+            
+        - Left charge ($-2q$): $\vec{r}_3 = -a\hat{i}$
+            
+        - Right charge ($-2q$): $\vec{r}_4 = +a\hat{i}$
+            
+    2. Sum $q_i \vec{r}_i$ for all four charges:
+        
+        $$\vec{p} = (+3q)(a\hat{j}) + (+q)(-a\hat{j}) + (-2q)(-a\hat{i}) + (-2q)(a\hat{i})$$
+        
+    3. Combine the $\hat{i}$ terms and $\hat{j}$ terms separately:
+        
+        $$\vec{p} = (2qa\hat{i} - 2qa\hat{i}) + (3qa\hat{j} - qa\hat{j}) = 0\hat{i} + 2qa\hat{j} = 2qa\hat{j}$$
+        
+- **Correct Option:** **(A)**
 
 
 ---
