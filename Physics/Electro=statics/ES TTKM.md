@@ -212,45 +212,62 @@ $$\vert{}\vec{E}\vert{} = \sqrt{E_x^2 + E_y^2 + E_z^2}$$
 
 # Dipole concept
 
-> Four charges are placed each at a distance $a$ from origin (top $+3q$ at $(0, a)$, bottom $+q$ at $(0, -a)$, left $-2q$ at $(-a, 0)$, right $-2q$ at $(a, 0)$). The dipole moment of configuration is:
-> 
-> - **(A)** $2qa\hat{j}$
->     
-> - **(B)** $3qa\hat{j}$
->     
-> - **(C)** $2qa[\hat{i} + \hat{j}]$
->     
-> - **(D)** None
->     
+![[Pasted image 20261117230802.png]]
 
-- **Concept:** For any neutral system of charges (notice $+3q + q - 2q - 2q = 0$), the net electric dipole moment is simply the vector sum $\vec{p} = \sum q_i \vec{r}_i$ (or equivalently, we can split $+3q$ into $+2q + q$ and pair up opposite charges into standard dipoles pointing from negative to positive!).
-    
-- **Standard Formula:**
-    
-    $$\vec{p} = \sum q_i \vec{r}_i$$
-    
-- **Step-by-Step Solution:**
-    
-    1. Write the position vector $\vec{r}_i$ of each charge from the origin:
-        
-        - Top charge ($+3q$): $\vec{r}_1 = +a\hat{j}$
-            
-        - Bottom charge ($+q$): $\vec{r}_2 = -a\hat{j}$
-            
-        - Left charge ($-2q$): $\vec{r}_3 = -a\hat{i}$
-            
-        - Right charge ($-2q$): $\vec{r}_4 = +a\hat{i}$
-            
-    2. Sum $q_i \vec{r}_i$ for all four charges:
-        
-        $$\vec{p} = (+3q)(a\hat{j}) + (+q)(-a\hat{j}) + (-2q)(-a\hat{i}) + (-2q)(a\hat{i})$$
-        
-    3. Combine the $\hat{i}$ terms and $\hat{j}$ terms separately:
-        
-        $$\vec{p} = (2qa\hat{i} - 2qa\hat{i}) + (3qa\hat{j} - qa\hat{j}) = 0\hat{i} + 2qa\hat{j} = 2qa\hat{j}$$
-        
-- **Correct Option:** **(A)**
+Instead of treating all four charges as one complicated arrangement, let's divide them into two simpler parts.
 
+Part 1: The vertical charges
+- Top: $+3q$
+- Bottom: $+q$
+Their contributions to dipole moment are:
+
+$$
+p_{\text{top}}=3q\times a=3qa
+$$
+
+Direction: upward.
+
+$$
+p_{\text{bottom}}=q\times a=qa
+$$
+
+Direction: downward.
+
+So the net vertical contribution is:
+
+$$
+\vec p_y=3qa\hat j-qa\hat j
+$$
+
+$$
+\boxed{\vec p_y=2qa\hat j}
+$$
+
+Part 2: The horizontal charges
+- Left: $-2q$
+- Right: $-2q$
+Both are equal negative charges, symmetrically placed.
+
+Their dipole moment contributions cancel:
+
+$$
+\vec p_x=0
+$$
+
+Therefore, the total dipole moment is:
+
+$$
+\boxed{\vec p=2qa\hat j}
+$$
+
+Answer: Option A.
+
+4. But wait, why does the formula work for four charges?
+For a neutral collection of charges, the general formula is:
+
+$$
+\boxed{\vec p=\sum_i q_i\vec r_i}
+$$
 
 ---
 
