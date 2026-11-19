@@ -212,6 +212,16 @@ $$\vert{}\vec{E}\vert{} = \sqrt{E_x^2 + E_y^2 + E_z^2}$$
 
 # Dipole concept
 
+At a point on the axis of a dipole, the electric field points in the **same direction as the dipole moment**.
+
+This is true on both sides of the dipole.
+
+And here's the crucial rule:
+
+- Axial field: same direction as dipole moment.
+    
+	- Equatorial field: opposite direction to dipole moment.
+
 ![[Pasted image 20261117230802.png]]
 
 Instead of treating all four charges as one complicated arrangement, let's divide them into two simpler parts.
@@ -268,6 +278,13 @@ For a neutral collection of charges, the general formula is:
 $$
 \boxed{\vec p=\sum_i q_i\vec r_i}
 $$
+
+---
+
+## Important point about uniform distribution over a finite length rod or object
+
+We use " Center of Mass " concept to put charge " q " at the position of center of mass, then do other work.
+
 
 ---
 
