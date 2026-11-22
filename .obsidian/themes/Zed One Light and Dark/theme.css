@@ -1,0 +1,696 @@
+/* Zed One Light and Dark. Zed One source and mapping details: COLOR-SPEC.md. */
+
+.theme-light {
+  --one-editor-background: #fafafaff;
+  --one-toolbar-background: #fafafaff;
+  --one-element-background: #ebebecff;
+  --one-surface-background: #ebebecff;
+  --one-border-variant: #dfdfe0ff;
+  --one-background: #dcdcddff;
+  --one-border-disabled: #d3d3d4ff;
+  --one-border: #c9c9caff;
+  --one-editor-line-number: #b4b4bb;
+  --one-text-placeholder: #7e8086ff;
+  --one-text-muted: #58585aff;
+  --one-text: #242529ff;
+  --one-error: #d36151ff;
+  --one-syntax-number: #ad6e25ff;
+  --one-warning: #a48819ff;
+  --one-success: #669f59ff;
+  --one-syntax-type: #3882b7ff;
+  --one-text-accent: #5c78e2ff;
+  --one-syntax-keyword: #a449abff;
+  --one-terminal-ansi-bright-red: #de3e35ff;
+  --one-panel-background: #ebebecff;
+  --one-border-focused: #7d82e8ff;
+  --one-ghost-element-hover: #dfdfe0ff;
+  --one-ghost-element-background: #00000000;
+  --one-ghost-element-active: #cacacaff;
+  --one-element-hover: #dfdfe0ff;
+  --one-syntax-constant: #c18401ff;
+  --one-players-0-selection: #5c78e23d;
+  --one-icon-muted: #58585aff;
+  --one-icon: #242529ff;
+  --one-icon-accent: #5c78e2ff;
+  --one-players-0-cursor: #5c78e2ff;
+  --one-scrollbar-track-background: #00000000;
+  --one-scrollbar-thumb-background: #383a414c;
+  --one-scrollbar-thumb-hover-background: #dfdfe0ff;
+  --one-drop-target-background: #7e808780;
+  --one-link-text-hover: #5c78e2ff;
+  --one-terminal-ansi-black: #000000ff;
+  --one-accent-h: 227.46268657;
+  --one-accent-s: 69.79166667%;
+  --one-accent-l: 62.35294118%;
+  --one-title-bar-inactive-background: #ebebecff;
+  --one-title-bar-background: #dcdcddff;
+  --one-status-bar-background: #dcdcddff;
+  --one-tab-bar-background: #ebebecff;
+  --one-tab-active-background: #fafafaff;
+  --one-ghost-element-selected: #cacacaff;
+  --one-icon-placeholder: #58585aff;
+  --one-elevated-surface-background: #ebebecff;
+  --one-element-selected: #cacacaff;
+  --one-text-disabled: #7e8086ff;
+  --one-search-match-background: #5c79e266;
+  --one-search-active-match-background: #d0a92366;
+  --one-error-background: #fbdfd9ff;
+  --one-modified-background: #faf2e6ff;
+  --one-warning-background: #faf2e6ff;
+  --one-success-background: #dfeadbff;
+  --one-info-background: #e2e2faff;
+  --one-hint-background: #e2e2faff;
+  --one-syntax-punctuation-list-marker: #d3604fff;
+  --one-terminal-ansi-bright-green: #3f953aff;
+  --one-border-selected: #cbcdf6ff;
+  --one-editor-document-highlight-read-background: #5c78e225;
+  --one-element-active: #cacacaff;
+  --one-editor-active-line-number: #44454b;
+  --one-editor-hover-line-number: #61616b;
+  --one-editor-highlighted-line-background: #ebebecff;
+  --one-syntax-embedded: #242529ff;
+  --one-info: #5c78e2ff;
+  --one-editor-foreground: #242529ff;
+  --one-syntax-comment: #a2a3a7ff;
+  --one-syntax-function: #5b79e3ff;
+  --one-syntax-string-regex: #ad6e26ff;
+  --one-syntax-operator: #3882b7ff;
+  --one-syntax-property: #d3604fff;
+  --one-syntax-punctuation: #242529ff;
+  --one-syntax-string: #649f57ff;
+  --one-syntax-tag: #5c78e2ff;
+  --one-syntax-text-literal: #649f57ff;
+  --one-syntax-attribute: #5c78e2ff;
+  --one-syntax-variable: #242529ff;
+  --one-syntax-boolean: #ad6e25ff;
+  --one-syntax-punctuation-bracket: #4d4f52ff;
+  --one-syntax-selector: #669f59ff;
+  --one-syntax-diff-plus: #50a14fff;
+  --one-syntax-diff-minus: #e45649ff;
+  --one-syntax-title: #d3604fff;
+  --one-syntax-emphasis: #5c78e2ff;
+  --one-syntax-emphasis-strong: #ad6e25ff;
+  --one-syntax-variable-parameter: #d3604fff;
+  --one-syntax-selector-pseudo: #5c78e2ff;
+}
+
+.theme-dark {
+  --one-editor-background: #282c33ff;
+  --one-toolbar-background: #282c33ff;
+  --one-element-background: #2e343eff;
+  --one-surface-background: #2f343eff;
+  --one-border-variant: #363c46ff;
+  --one-background: #3b414dff;
+  --one-border-disabled: #414754ff;
+  --one-border: #464b57ff;
+  --one-editor-line-number: #4e5a5f;
+  --one-text-placeholder: #878a98ff;
+  --one-text-muted: #a9afbcff;
+  --one-text: #dce0e5ff;
+  --one-error: #d07277ff;
+  --one-syntax-number: #bf956aff;
+  --one-warning: #dec184ff;
+  --one-success: #a1c181ff;
+  --one-syntax-type: #6eb4bfff;
+  --one-text-accent: #74ade8ff;
+  --one-syntax-keyword: #b477cfff;
+  --one-terminal-ansi-bright-red: #EA858Bff;
+  --one-panel-background: #2f343eff;
+  --one-border-focused: #47679eff;
+  --one-ghost-element-hover: #363c46ff;
+  --one-ghost-element-background: #00000000;
+  --one-ghost-element-active: #454a56ff;
+  --one-element-hover: #363c46ff;
+  --one-syntax-constant: #dfc184ff;
+  --one-players-0-selection: #74ade83d;
+  --one-icon-muted: #a9afbcff;
+  --one-icon: #dce0e5ff;
+  --one-icon-accent: #74ade8ff;
+  --one-players-0-cursor: #74ade8ff;
+  --one-scrollbar-track-background: #00000000;
+  --one-scrollbar-thumb-background: #c8ccd44c;
+  --one-scrollbar-thumb-hover-background: #363c46ff;
+  --one-drop-target-background: #83899480;
+  --one-link-text-hover: #74ade8ff;
+  --one-terminal-ansi-black: #282c34ff;
+  --one-accent-h: 210.51724138;
+  --one-accent-s: 71.60493827%;
+  --one-accent-l: 68.23529412%;
+  --one-title-bar-inactive-background: #2e343eff;
+  --one-title-bar-background: #3b414dff;
+  --one-status-bar-background: #3b414dff;
+  --one-tab-bar-background: #2f343eff;
+  --one-tab-active-background: #282c33ff;
+  --one-ghost-element-selected: #454a56ff;
+  --one-icon-placeholder: #a9afbcff;
+  --one-elevated-surface-background: #2f343eff;
+  --one-element-selected: #454a56ff;
+  --one-text-disabled: #878a98ff;
+  --one-search-match-background: #74ade866;
+  --one-search-active-match-background: #e8af7466;
+  --one-error-background: #d072771a;
+  --one-modified-background: #dec1841a;
+  --one-warning-background: #dec1841a;
+  --one-success-background: #a1c1811a;
+  --one-info-background: #74ade81a;
+  --one-hint-background: #5a6f891a;
+  --one-syntax-punctuation-list-marker: #d07277ff;
+  --one-terminal-ansi-bright-green: #AAD581ff;
+  --one-border-selected: #293b5bff;
+  --one-editor-document-highlight-read-background: #74ade81a;
+  --one-element-active: #454a56ff;
+  --one-editor-active-line-number: #d0d4da;
+  --one-editor-hover-line-number: #acb0b4;
+  --one-editor-highlighted-line-background: #2f343eff;
+  --one-syntax-embedded: #dce0e5ff;
+  --one-info: #74ade8ff;
+  --one-editor-foreground: #acb2beff;
+  --one-syntax-comment: #5d636fff;
+  --one-syntax-function: #73ade9ff;
+  --one-syntax-string-regex: #bf956aff;
+  --one-syntax-operator: #6eb4bfff;
+  --one-syntax-property: #d07277ff;
+  --one-syntax-punctuation: #acb2beff;
+  --one-syntax-string: #a1c181ff;
+  --one-syntax-tag: #74ade8ff;
+  --one-syntax-text-literal: #a1c181ff;
+  --one-syntax-attribute: #74ade8ff;
+  --one-syntax-variable: #acb2beff;
+  --one-syntax-boolean: #bf956aff;
+  --one-syntax-punctuation-bracket: #b2b9c6ff;
+  --one-syntax-selector: #dfc184ff;
+  --one-syntax-diff-plus: #98c379ff;
+  --one-syntax-diff-minus: #e06c75ff;
+  --one-syntax-title: #d07277ff;
+  --one-syntax-emphasis: #74ade8ff;
+  --one-syntax-emphasis-strong: #bf956aff;
+  --one-syntax-variable-parameter: #d07277ff;
+  --one-syntax-selector-pseudo: #74ade8ff;
+}
+
+/* Shared surfaces and foregrounds */
+
+.theme-light, .theme-dark {
+  --color-base-00: var(--one-editor-background);
+  --color-base-05: var(--one-toolbar-background);
+  --color-base-10: var(--one-element-background);
+  --color-base-20: var(--one-surface-background);
+  --color-base-25: var(--one-border-variant);
+  --color-base-30: var(--one-background);
+  --color-base-35: var(--one-border-disabled);
+  --color-base-40: var(--one-border);
+  --color-base-50: var(--one-editor-line-number);
+  --color-base-60: var(--one-text-placeholder);
+  --color-base-70: var(--one-text-muted);
+  --color-base-100: var(--one-text);
+  --color-red: var(--one-error);
+  --color-orange: var(--one-syntax-number);
+  --color-yellow: var(--one-warning);
+  --color-green: var(--one-success);
+  --color-cyan: var(--one-syntax-type);
+  --color-blue: var(--one-text-accent);
+  --color-purple: var(--one-syntax-keyword);
+  --color-pink: var(--one-terminal-ansi-bright-red);
+  --background-primary: var(--one-editor-background);
+  --background-primary-alt: var(--one-surface-background);
+  --background-secondary: var(--one-panel-background);
+  --background-secondary-alt: var(--one-background);
+  --background-modifier-border: var(--one-border);
+  --background-modifier-border-hover: var(--one-border-disabled);
+  --background-modifier-border-focus: var(--one-border-focused);
+  --background-modifier-hover: var(--one-ghost-element-hover);
+  --background-modifier-active-hover: var(--one-ghost-element-active);
+  --background-modifier-form-field: var(--one-element-background);
+  --background-modifier-form-field-hover: var(--one-element-hover);
+  --background-modifier-error: var(--one-error);
+  --background-modifier-error-hover: var(--one-terminal-ansi-bright-red);
+  --background-modifier-warning: var(--one-warning);
+  --background-modifier-warning-hover: var(--one-syntax-constant);
+  --background-modifier-success: var(--one-success);
+  --text-normal: var(--one-text);
+  --text-muted: var(--one-text-muted);
+  --text-faint: var(--one-text-placeholder);
+  --text-error: var(--one-error);
+  --text-success: var(--one-success);
+  --text-warning: var(--one-warning);
+  --text-selection: var(--one-players-0-selection);
+  --icon-color: var(--one-icon-muted);
+  --icon-color-hover: var(--one-icon);
+  --icon-color-focused: var(--one-icon);
+  --icon-color-active: var(--one-icon-accent);
+  --interactive-normal: var(--one-element-background);
+  --interactive-hover: var(--one-element-hover);
+  --input-placeholder-color: var(--one-text-placeholder);
+  --caret-color: var(--one-players-0-cursor);
+  --scrollbar-bg: var(--one-scrollbar-track-background);
+  --scrollbar-thumb-bg: var(--one-scrollbar-thumb-background);
+  --scrollbar-active-thumb-bg: var(--one-scrollbar-thumb-hover-background);
+  --drag-ghost-background: var(--one-drop-target-background);
+  --drag-ghost-text-color: var(--one-text);
+  --drag-item-background: var(--one-surface-background);
+  --divider-color: var(--one-border-variant);
+  --divider-color-hover: var(--one-border-focused);
+}
+
+/* Theme default accent. Obsidian sets --accent-h inline for a user choice. */
+
+:is(.theme-light, .theme-dark):not([style*="--accent-h:"]) {
+  --color-accent: var(--one-text-accent);
+  --color-accent-1: var(--one-border-focused);
+  --color-accent-2: var(--one-border-focused);
+  --text-accent: var(--one-text-accent);
+  --text-accent-hover: var(--one-link-text-hover);
+  --interactive-accent: var(--one-text-accent);
+  --interactive-accent-hover: var(--one-border-focused);
+  --text-on-accent: var(--one-terminal-ansi-black);
+  --accent-h: var(--one-accent-h);
+  --accent-s: var(--one-accent-s);
+  --accent-l: var(--one-accent-l);
+}
+
+.theme-dark:not([style*="--accent-h:"]) button.mod-cta:is(:hover, .mobile-tap) {
+  --text-on-accent: var(--one-text);
+}
+
+/* Workspace and navigation */
+
+.theme-light, .theme-dark {
+  --titlebar-background: var(--one-title-bar-inactive-background);
+  --titlebar-background-focused: var(--one-title-bar-background);
+  --titlebar-border-color: var(--one-border-variant);
+  --titlebar-text-color: var(--one-text-muted);
+  --titlebar-text-color-focused: var(--one-text);
+  --ribbon-background: var(--one-background);
+  --ribbon-background-collapsed: var(--one-background);
+  --status-bar-background: var(--one-status-bar-background);
+  --status-bar-border-color: var(--one-border-variant);
+  --status-bar-text-color: var(--one-text-muted);
+  --tab-container-background: var(--one-tab-bar-background);
+  --sidebar-tab-container-background: var(--one-tab-bar-background);
+  --tab-background-active: var(--one-tab-active-background);
+  --tab-divider-color: var(--one-border-variant);
+  --tab-outline-color: var(--one-border-variant);
+  --tab-outline-color-hover: var(--one-border);
+  --tab-inner-background-hover: var(--one-ghost-element-hover);
+  --tab-text-color: var(--one-text-muted);
+  --tab-text-color-active: var(--one-text);
+  --tab-text-color-focused: var(--one-text-muted);
+  --tab-text-color-focused-active: var(--one-text);
+  --tab-text-color-focused-active-current: var(--one-text);
+  --tab-text-color-focused-highlighted: var(--one-text-accent);
+  --nav-item-background-hover: var(--one-ghost-element-hover);
+  --nav-item-background-active: var(--one-ghost-element-active);
+  --nav-item-background-selected: var(--one-ghost-element-selected);
+  --nav-item-color: var(--one-text-muted);
+  --nav-item-color-hover: var(--one-text);
+  --nav-item-color-active: var(--one-text);
+  --nav-item-color-selected: var(--one-text);
+  --nav-item-color-highlighted: var(--one-text-accent);
+  --nav-heading-color: var(--one-text);
+  --nav-heading-color-hover: var(--one-text);
+  --nav-heading-color-collapsed: var(--one-text-muted);
+  --nav-heading-color-collapsed-hover: var(--one-text);
+  --nav-collapse-icon-color: var(--one-icon-muted);
+  --nav-collapse-icon-color-collapsed: var(--one-icon-placeholder);
+  --nav-indentation-guide-color: var(--one-border-variant);
+  --file-header-background: var(--one-toolbar-background);
+  --file-header-background-focused: var(--one-toolbar-background);
+  --mobile-sidebar-background: var(--one-panel-background);
+}
+
+body:not(.is-translucent) :where(.app-container, .workspace) {
+  background-color: var(--one-background);
+}
+
+.workspace-tabs.mod-top {
+  --tab-container-background: var(--one-tab-bar-background);
+  --sidebar-tab-container-background: var(--one-tab-bar-background);
+}
+
+.mod-root .workspace-tab-header-container {
+  --tab-outline-color-hover: var(--one-ghost-element-background);
+}
+
+.workspace :where(.mod-sidedock) .view-header {
+  --file-header-background: var(--one-panel-background);
+  --file-header-background-focused: var(--one-panel-background);
+}
+
+.theme-light .workspace-ribbon.mod-primary .side-dock-ribbon-action {
+  --background-modifier-hover: var(--one-element-active);
+}
+
+.theme-dark .workspace-ribbon.mod-primary .side-dock-ribbon-action {
+  --background-modifier-hover: var(--one-editor-background);
+}
+
+/* Settings, menus, dialogs, and search */
+
+.theme-light, .theme-dark {
+  --modal-background: var(--one-elevated-surface-background);
+  --modal-border-color: var(--one-border);
+  --menu-background: var(--one-elevated-surface-background);
+  --menu-border-color: var(--one-border);
+  --menu-divider-color: var(--one-border-variant);
+  --prompt-background: var(--one-elevated-surface-background);
+  --prompt-border-color: var(--one-border);
+  --suggestion-background: var(--one-elevated-surface-background);
+  --tooltip-background: var(--one-elevated-surface-background);
+  --tooltip-color: var(--one-text);
+  --notice-background: var(--one-elevated-surface-background);
+  --notice-color: var(--one-text);
+  --search-result-background: var(--one-surface-background);
+  --search-icon-color: var(--one-icon-muted);
+  --search-clear-button-color: var(--one-icon-placeholder);
+}
+
+.modal:where(.mod-settings, .mod-community-theme) {
+  --settings-background: var(--one-elevated-surface-background);
+  --modal-sidebar-background: var(--one-panel-background);
+  --setting-items-background: var(--one-editor-background);
+  --setting-items-border-color: var(--one-border);
+  --setting-items-divider-color: var(--one-border-variant);
+  --setting-group-heading-color: var(--one-text);
+  --setting-item-name-color: var(--one-text);
+  --background-modifier-form-field: var(--one-editor-background);
+  --background-modifier-form-field-hover: var(--one-element-hover);
+}
+
+.modal.mod-settings {
+  --settings-background: var(--one-editor-background);
+  --modal-sidebar-background: var(--one-panel-background);
+  --setting-items-background: var(--one-surface-background);
+  --interactive-normal: var(--one-editor-background);
+}
+
+.modal.mod-settings .vertical-tab-content {
+  background-color: var(--settings-background);
+}
+
+.modal.mod-settings .vertical-tab-nav-item.is-active {
+  --background-modifier-hover: var(--one-element-selected);
+  --text-muted: var(--one-text);
+  --icon-color: var(--one-icon-accent);
+}
+
+.modal.mod-community-theme .modal-sidebar {
+  background-color: var(--one-panel-background);
+  border-color: var(--one-border-variant);
+}
+
+.markdown-source-view :is(input, textarea):disabled {
+  color: var(--one-text-disabled);
+}
+
+.search-result-file-matched-text {
+  --highlight-background: var(--one-search-match-background);
+}
+
+.markdown-source-view.mod-cm6 .obsidian-search-match-highlight {
+  background-color: var(--one-search-active-match-background);
+}
+
+/* Markdown and Properties */
+
+:where(.markdown-source-view, .markdown-rendered) {
+  --h1-color: var(--one-text);
+  --h2-color: var(--one-text);
+  --h3-color: var(--one-text);
+  --h4-color: var(--one-text);
+  --h5-color: var(--one-text);
+  --h6-color: var(--one-text);
+  --inline-title-color: var(--one-text);
+  --bold-color: var(--one-text);
+  --italic-color: var(--one-text);
+  --text-highlight-bg: var(--one-search-active-match-background);
+  --highlight-background: var(--text-highlight-bg);
+  --highlight-background-red: var(--one-error-background);
+  --highlight-background-orange: var(--one-modified-background);
+  --highlight-background-yellow: var(--one-warning-background);
+  --highlight-background-green: var(--one-success-background);
+  --highlight-background-blue: var(--one-info-background);
+  --highlight-background-purple: var(--one-hint-background);
+  --blockquote-color: var(--one-text-muted);
+  --blockquote-border-color: var(--one-border-variant);
+  --blockquote-background-color: var(--one-surface-background);
+  --hr-color: var(--one-border);
+  --list-marker-color: var(--one-syntax-punctuation-list-marker);
+  --list-marker-color-hover: var(--one-text-muted);
+  --list-marker-color-collapsed: var(--one-text-accent);
+  --checkbox-border-color: var(--one-border);
+  --checkbox-border-color-hover: var(--one-border-focused);
+  --checkbox-color: var(--one-success);
+  --checkbox-color-hover: var(--one-terminal-ansi-bright-green);
+  --checkbox-marker-color: var(--one-editor-background);
+  --checklist-done-color: var(--one-text-muted);
+  --table-background: var(--one-editor-background);
+  --table-text-color: var(--one-text);
+  --table-header-color: var(--one-text);
+  --table-header-background: var(--one-surface-background);
+  --table-header-border-color: var(--one-border-variant);
+  --table-border-color: var(--one-border);
+  --table-row-alt-background: var(--one-surface-background);
+  --table-row-alt-background-hover: var(--one-ghost-element-hover);
+  --table-row-background-hover: var(--one-ghost-element-hover);
+  --table-header-background-hover: var(--one-ghost-element-hover);
+  --table-selection-border-color: var(--one-border-selected);
+  --link-unresolved-color: var(--one-text-placeholder);
+  --link-unresolved-decoration-color: var(--one-text-placeholder);
+  --tag-background: var(--one-editor-document-highlight-read-background);
+  --tag-background-hover: var(--one-editor-document-highlight-read-background);
+  --tag-border-color: var(--one-border-variant);
+  --tag-border-color-hover: var(--one-border-variant);
+  --metadata-border-color: var(--one-border-variant);
+  --metadata-divider-color: var(--one-border-variant);
+  --metadata-divider-color-hover: var(--one-border);
+  --metadata-divider-color-focus: var(--one-border-focused);
+  --metadata-label-text-color: var(--one-text-muted);
+  --metadata-label-text-color-hover: var(--one-text);
+  --metadata-input-text-color: var(--one-text);
+  --metadata-property-background-hover: var(--one-ghost-element-hover);
+  --metadata-input-background-hover: var(--one-ghost-element-hover);
+  --metadata-label-background-active: var(--one-element-active);
+  --metadata-property-background-active: var(--one-element-active);
+  --metadata-input-background-active: var(--one-element-active);
+}
+
+.markdown-source-view :where(.cm-lineNumbers) .cm-gutterElement {
+  color: var(--one-editor-line-number);
+}
+
+.markdown-source-view :where(.cm-lineNumbers) .cm-gutterElement.cm-active {
+  color: var(--one-editor-active-line-number);
+}
+
+.markdown-source-view :where(.cm-lineNumbers) .cm-gutterElement:hover {
+  color: var(--one-editor-hover-line-number);
+}
+
+.markdown-source-view :where(.is-flashing), .markdown-rendered :where(.is-flashing) {
+  --highlight-background: var(--one-editor-highlighted-line-background);
+}
+
+:where(.markdown-source-view, .markdown-rendered) :is(.math, .cm-math) {
+  color: var(--one-syntax-embedded);
+}
+
+/* Callout, Graph, Canvas, and Mermaid */
+
+.theme-light, .theme-dark {
+  --callout-default: var(--one-text-accent);
+  --callout-todo: var(--one-text-accent);
+  --callout-info: var(--one-info);
+  --callout-summary: var(--one-info);
+  --callout-tip: var(--one-syntax-type);
+  --callout-important: var(--one-syntax-keyword);
+  --callout-example: var(--one-syntax-keyword);
+  --callout-success: var(--one-success);
+  --callout-question: var(--one-warning);
+  --callout-warning: var(--one-warning);
+  --callout-error: var(--one-error);
+  --callout-fail: var(--one-error);
+  --callout-bug: var(--one-error);
+  --callout-quote: var(--one-text-muted);
+  --graph-node: var(--one-text-muted);
+  --graph-node-focused: var(--one-text-accent);
+  --graph-node-tag: var(--one-success);
+  --graph-node-attachment: var(--one-info);
+  --graph-node-unresolved: var(--one-text-placeholder);
+  --graph-line: var(--one-border);
+  --graph-text: var(--one-text);
+  --canvas-background: var(--one-editor-background);
+  --canvas-dot-pattern: var(--one-border-variant);
+  --canvas-card-label-color: var(--one-text-muted);
+  --canvas-color-1: var(--one-error);
+  --canvas-color-2: var(--one-syntax-number);
+  --canvas-color-3: var(--one-warning);
+  --canvas-color-4: var(--one-success);
+  --canvas-color-5: var(--one-syntax-type);
+  --canvas-color-6: var(--one-syntax-keyword);
+  --mermaid-background: var(--one-editor-background);
+  --mermaid-surface: var(--one-surface-background);
+  --mermaid-surface-alt: var(--one-elevated-surface-background);
+  --mermaid-border-color: var(--one-border);
+  --mermaid-text-color: var(--one-text);
+  --mermaid-muted-color: var(--one-text-muted);
+  --mermaid-line-color: var(--one-text-muted);
+  --mermaid-accent: var(--one-text-accent);
+  --mermaid-error: var(--one-error);
+  --mermaid-critical: var(--one-error);
+  --mermaid-color-1: var(--one-text-accent);
+  --mermaid-color-2: var(--one-syntax-number);
+  --mermaid-color-3: var(--one-success);
+  --mermaid-color-4: var(--one-error);
+  --mermaid-color-5: var(--one-syntax-type);
+  --mermaid-color-6: var(--one-warning);
+  --mermaid-color-7: var(--one-syntax-keyword);
+  --mermaid-color-8: var(--one-terminal-ansi-bright-red);
+}
+
+.canvas-wrapper {
+  --canvas-color: var(--one-border);
+}
+
+/* Code colors shared by CodeMirror and Prism */
+
+:where(.markdown-source-view, .markdown-rendered) {
+  --code-background: var(--one-surface-background);
+  --code-border-color: var(--one-border);
+  --code-normal: var(--one-editor-foreground);
+  --code-comment: var(--one-syntax-comment);
+  --code-function: var(--one-syntax-function);
+  --code-important: var(--one-syntax-string-regex);
+  --code-keyword: var(--one-syntax-keyword);
+  --code-operator: var(--one-syntax-operator);
+  --code-property: var(--one-syntax-property);
+  --code-punctuation: var(--one-syntax-punctuation);
+  --code-string: var(--one-syntax-string);
+  --code-tag: var(--one-syntax-tag);
+  --code-value: var(--one-syntax-number);
+}
+
+.markdown-source-view span.cm-inline-code:where(:not(.cm-hmd-codeblock)), .markdown-rendered :not(pre) > code {
+  --code-normal: var(--one-syntax-text-literal);
+}
+
+.markdown-rendered :is(th, td) code:not(:where(pre code)),
+.markdown-source-view :is(.cm-table-widget, .HyperMD-table-row) span.cm-inline-code {
+  --code-background: var(--one-ghost-element-background);
+  --code-normal: var(--one-editor-foreground);
+}
+
+/* CodeMirror fence tokens with shared or unstyled host classes */
+
+.markdown-source-view .cm-hmd-codeblock.cm-def {
+  color: var(--one-syntax-function);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-type {
+  color: var(--one-syntax-type);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-attribute {
+  color: var(--one-syntax-attribute);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-property {
+  color: var(--one-syntax-property);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-variable {
+  color: var(--one-syntax-variable);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-atom {
+  color: var(--one-syntax-boolean);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-bracket {
+  color: var(--one-syntax-punctuation-bracket);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-qualifier {
+  color: var(--one-syntax-selector);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-positive {
+  color: var(--one-syntax-diff-plus);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-negative {
+  color: var(--one-syntax-diff-minus);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-header {
+  color: var(--one-syntax-title);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-em {
+  color: var(--one-syntax-emphasis);
+}
+
+.markdown-source-view .cm-hmd-codeblock.cm-strong {
+  color: var(--one-syntax-emphasis-strong);
+}
+
+/* Prism fence tokens. Bash labels built-ins as class-name as well. */
+
+.markdown-rendered pre code .token.boolean {
+  color: var(--one-syntax-boolean);
+}
+
+.markdown-rendered pre code .token.constant {
+  color: var(--one-syntax-constant);
+}
+
+.markdown-rendered pre code .token.attr-name {
+  color: var(--one-syntax-attribute);
+}
+
+.markdown-rendered pre code .token.attr-value {
+  color: var(--one-syntax-string);
+}
+
+.markdown-rendered pre code .token.class-name:where(:not(.builtin)), .markdown-rendered pre code.language-typescript .token.builtin {
+  color: var(--one-syntax-type);
+}
+
+.markdown-rendered pre code .token.property-access:where(:not(.function)) {
+  color: var(--one-syntax-property);
+}
+
+.markdown-rendered pre code .token.parameter {
+  color: var(--one-syntax-variable-parameter);
+}
+
+.markdown-rendered pre code .token.variable {
+  color: var(--one-syntax-variable);
+}
+
+.markdown-rendered pre code.language-css .token.selector {
+  color: var(--one-syntax-selector);
+}
+
+.markdown-rendered pre code.language-css .token.pseudo-class {
+  color: var(--one-syntax-selector-pseudo);
+}
+
+.markdown-rendered pre code .token.inserted {
+  color: var(--one-syntax-diff-plus);
+}
+
+.markdown-rendered pre code .token.deleted {
+  color: var(--one-syntax-diff-minus);
+}
+
+.markdown-rendered pre code.language-markdown .token.title {
+  color: var(--one-syntax-title);
+}
+
+.markdown-rendered pre code.language-markdown .token.italic {
+  color: var(--one-syntax-emphasis);
+}
+
+.markdown-rendered pre code.language-markdown .token.bold {
+  color: var(--one-syntax-emphasis-strong);
+}

@@ -1,0 +1,992 @@
+/* =============================================================================
+   Polar — a calm Obsidian theme inspired by the Bear notes app
+   (Red Graphite in light mode, Dark Graphite in dark mode).
+
+   Layout idea (with Notebook Navigator):
+     [ dark tag/folder sidebar ] [ note list with previews ] [ calm editor ]
+   ============================================================================= */
+
+/* @settings
+
+name: Polar
+id: polar
+settings:
+    -
+        id: polar-interface
+        title: Interface
+        description: Polar hides some of Obsidian's interface for a calm, Bear-like window. Bring it back here.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: polar-status-bar
+        title: Status bar
+        description: Word count, sync status and other plugin indicators
+        type: class-select
+        allowEmpty: false
+        default: polar-status-bar-hidden
+        options:
+            -
+                label: Hidden
+                value: polar-status-bar-hidden
+            -
+                label: Show on hover
+                value: polar-status-bar-hover
+            -
+                label: Visible
+                value: polar-status-bar-visible
+    -
+        id: polar-show-tab-bar
+        title: Show tab bar
+        description: The tab bar above the editor
+        type: class-toggle
+        default: false
+    -
+        id: polar-show-vault-profile
+        title: Show vault footer
+        description: Vault name, help and settings buttons under the sidebar
+        type: class-toggle
+        default: false
+    -
+        id: polar-show-note-header
+        title: Show note title and navigation buttons
+        description: Back and forward buttons and the file title in the note header
+        type: class-toggle
+        default: false
+
+*/
+
+/* -----------------------------------------------------------------------------
+   1. Shared tokens
+   -------------------------------------------------------------------------- */
+body {
+  --bear-font: "Bear Sans UI", "Bear Sans", "Avenir Next", -apple-system, BlinkMacSystemFont, sans-serif;
+  --bear-mono: "SF Mono", Menlo, Monaco, monospace;
+
+  --font-text-theme: var(--bear-font);
+  --font-interface-theme: var(--bear-font);
+  --font-monospace-theme: var(--bear-mono);
+
+  --font-text-size: 16px;
+  --font-weight: 450;
+  --line-height-normal: 1.65;
+  --file-line-width: 680px;
+  --file-margins: 48px 56px;
+
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 10px;
+
+  /* Headings: Bear keeps them in body color, bold, modest steps */
+  --h1-size: 1.9em;
+  --inline-title-size: 1.9em;
+  --inline-title-weight: 700;
+  --h2-size: 1.35em;
+  --h3-size: 1.18em;
+  --h4-size: 1.05em;
+  --h5-size: 1em;
+  --h6-size: 1em;
+  --h1-weight: 700;
+  --h2-weight: 700;
+  --h3-weight: 700;
+  --h4-weight: 700;
+  --h5-weight: 600;
+  --h6-weight: 600;
+  --h1-line-height: 1.3;
+  --h2-line-height: 1.3;
+  --h3-line-height: 1.35;
+  --heading-spacing: 1.4em;
+
+  --bold-weight: 700;
+  --checkbox-radius: 4px;
+  --checkbox-size: 16px;
+  --list-indent: 1.6em;
+  --list-bullet-size: 5px;
+  --hr-thickness: 1px;
+  --blockquote-border-thickness: 3px;
+  --tag-radius: 999px;
+  --tag-padding-x: 8px;
+  --tag-padding-y: 1px;
+  --tag-weight: 500;
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+  --link-decoration: none;
+  --link-external-decoration: none;
+  --link-unresolved-decoration-style: dotted;
+}
+
+/* -----------------------------------------------------------------------------
+   2. Red Graphite (light)
+   -------------------------------------------------------------------------- */
+.theme-light {
+  --bear-red: #dc4c51;
+  --bear-link: #c4474b;
+  --bear-red-soft: rgba(220, 76, 81, 0.12);
+
+  /* editor + note list */
+  --background-primary: #ffffff;
+  --background-primary-alt: #f7f7f7;
+  --background-secondary: #f4f4f4;
+  --background-secondary-alt: #ececec;
+  --background-modifier-border: #e4e4e4;
+  --background-modifier-border-hover: #d6d6d6;
+  --background-modifier-border-focus: #c8c8c8;
+  --background-modifier-hover: rgba(0, 0, 0, 0.045);
+  --background-modifier-active-hover: rgba(0, 0, 0, 0.07);
+
+  --text-normal: #444444;
+  --text-muted: #8a8a8a;
+  --text-faint: #b4b4b4;
+  --text-on-accent: #ffffff;
+  --text-selection: rgba(220, 76, 81, 0.18);
+  --text-highlight-bg: #d1ffa1;
+
+  --color-accent: var(--bear-red);
+  --color-accent-1: #e35f62;
+  --color-accent-2: #c94346;
+  --interactive-accent: var(--bear-red);
+  --interactive-accent-hover: #c94346;
+
+  --link-color: var(--bear-link);
+  --link-color-hover: #a83a3e;
+  --link-external-color: var(--bear-link);
+  --link-external-color-hover: #a83a3e;
+  --link-unresolved-color: var(--bear-link);
+  --link-unresolved-opacity: 0.6;
+
+  --tag-color: #444444;
+  --tag-color-hover: #2e2e2e;
+  --tag-background: #e4e4e6;
+  --tag-background-hover: #d9d9dc;
+
+  --code-background: #f4f5f7;
+  --code-normal: #444444;
+  --code-inline: #dc4c51;
+  --bear-table-head: #f4f5f7;
+  --bear-table-stripe: #f4f5f7;
+  --bear-table-border: #d9d9d9;
+  --blockquote-border-color: #d9d9d9;
+  --blockquote-color: #777777;
+  --hr-color: #e0e0e0;
+  --list-marker-color: var(--bear-red);
+  --checkbox-color: var(--bear-red);
+  --checkbox-border-color: #c4c4c4;
+  --checklist-done-color: #a8a8a8;
+  --checklist-done-decoration: none;
+
+  /* dark graphite sidebar inside the light theme */
+  --bear-side-bg: #2e3235;
+  --bear-side-bg-hover: #3a3d40;
+  --bear-side-bg-selected: #474747;
+  --bear-side-text: #dadbdf;
+  --bear-side-muted: #98999d;
+  --bear-side-faint: #66686c;
+
+  /* note list */
+  --bear-list-bg: #ffffff;
+  --bear-list-selected: #f4f5f7;
+  --bear-list-selected-inactive: #f4f5f7;
+  --bear-list-separator: #e4e4e4;
+  --bear-pane-divider: #d9d9d9;
+}
+
+/* -----------------------------------------------------------------------------
+   3. Dark Graphite (dark)
+   -------------------------------------------------------------------------- */
+.theme-dark {
+  --bear-red: #e36366;
+  --bear-link: #e36366;
+  --bear-red-soft: rgba(227, 99, 102, 0.16);
+
+  --background-primary: #2a2c30;
+  --background-primary-alt: #25272b;
+  --background-secondary: #26282c;
+  --background-secondary-alt: #222428;
+  --background-modifier-border: #383b40;
+  --background-modifier-border-hover: #44474d;
+  --background-modifier-border-focus: #50535a;
+  --background-modifier-hover: rgba(255, 255, 255, 0.05);
+  --background-modifier-active-hover: rgba(255, 255, 255, 0.08);
+
+  --text-normal: #cdcfd2;
+  --text-muted: #8d9095;
+  --text-faint: #62656b;
+  --text-on-accent: #ffffff;
+  --text-selection: rgba(227, 99, 102, 0.28);
+  --text-highlight-bg: rgba(150, 215, 90, 0.30);
+
+  --color-accent: var(--bear-red);
+  --color-accent-1: #e97a7c;
+  --color-accent-2: #d55558;
+  --interactive-accent: var(--bear-red);
+  --interactive-accent-hover: #d55558;
+
+  --link-color: var(--bear-red);
+  --link-color-hover: #ec8486;
+  --link-external-color: var(--bear-red);
+  --link-external-color-hover: #ec8486;
+  --link-unresolved-color: var(--bear-red);
+  --link-unresolved-opacity: 0.6;
+
+  --tag-color: #c3c5c8;
+  --tag-color-hover: #e2e3e5;
+  --tag-background: #3a3d42;
+  --tag-background-hover: #44474d;
+
+  --code-background: #313338;
+  --code-normal: #cdcfd2;
+  --code-inline: #e36366;
+  --bear-table-head: #313338;
+  --bear-table-stripe: #2e3034;
+  --bear-table-border: #3f4247;
+  --blockquote-border-color: #474a50;
+  --blockquote-color: #9a9da2;
+  --hr-color: #3f4247;
+  --list-marker-color: var(--bear-red);
+  --checkbox-color: var(--bear-red);
+  --checkbox-border-color: #5d6066;
+  --checklist-done-color: #6c6f75;
+  --checklist-done-decoration: none;
+
+  --bear-side-bg: #1f2124;
+  --bear-side-bg-hover: #2a2c30;
+  --bear-side-bg-selected: #34373c;
+  --bear-side-text: #c9cbce;
+  --bear-side-muted: #85888d;
+  --bear-side-faint: #55585d;
+
+  --bear-list-bg: #26282c;
+  --bear-list-selected: #34373c;
+  --bear-list-selected-inactive: #2f3135;
+  --bear-list-separator: #303236;
+  --bear-pane-divider: #1b1d20;
+}
+
+/* -----------------------------------------------------------------------------
+   4. Workspace chrome — quiet, borderless, like Bear
+   -------------------------------------------------------------------------- */
+.workspace-split.mod-root,
+.workspace-split.mod-root .view-content,
+.workspace-split.mod-root .view-header {
+  background-color: var(--background-primary);
+}
+
+.workspace-split.mod-root .workspace-tab-header-container {
+  background-color: var(--background-primary);
+  border-bottom: none;
+}
+
+/* Right sidebar toggle (top-right corner). On macOS it floats above the tab
+   bar with the grey titlebar color; blend it into the editor instead, with
+   the same faint icon as the note header (the tab list chevron ⌄ next to
+   it gets the same faint color). Over an open right sidebar,
+   Obsidian uses --sidebar-tab-container-background, which stays untouched. */
+.workspace-split.mod-root .sidebar-toggle-button.mod-right,
+.workspace-split.mod-root .workspace-tab-header-tab-list {
+  --tab-container-background: var(--background-primary);
+  --icon-color: var(--text-faint);
+  --icon-color-hover: var(--text-muted);
+}
+
+.view-header {
+  border-bottom: none;
+}
+
+.view-header-title {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+body .workspace .workspace-leaf-resize-handle {
+  border-color: var(--background-modifier-border);
+}
+
+/* Ribbon + left sidebar: Bear's dark graphite column.
+   The ribbon is .mod-primary since Obsidian 1.15, .mod-left before that. */
+.workspace-ribbon.mod-left,
+.workspace-ribbon.mod-primary,
+.workspace-split.mod-left-split,
+.workspace-split.mod-left-split .workspace-tab-header-container,
+.workspace-split.mod-left-split .view-header,
+.workspace-split.mod-left-split .view-content,
+.workspace-split.mod-left-split .workspace-leaf-content {
+  --background-secondary: var(--bear-side-bg);
+  --background-primary: var(--bear-side-bg);
+  --background-modifier-hover: var(--bear-side-bg-hover);
+  --background-modifier-border: transparent;
+  --text-normal: var(--bear-side-text);
+  --text-muted: var(--bear-side-muted);
+  --text-faint: var(--bear-side-faint);
+  --icon-color: var(--bear-side-muted);
+  --icon-color-hover: var(--bear-side-text);
+  --icon-color-active: var(--bear-side-text);
+  --nav-item-color: var(--bear-side-text);
+  --nav-item-color-hover: #ffffff;
+  --nav-item-color-active: #ffffff;
+  --nav-item-background-hover: var(--bear-side-bg-hover);
+  --nav-item-background-active: var(--bear-side-bg-selected);
+  --nav-item-color-selected: #ffffff;
+  --nav-item-background-selected: var(--bear-side-bg-selected);
+  --nav-collapse-icon-color: var(--bear-side-faint);
+  background-color: var(--bear-side-bg);
+}
+
+.workspace-ribbon.mod-left,
+.workspace-ribbon.mod-primary {
+  --ribbon-background: var(--bear-side-bg);
+  --ribbon-background-collapsed: var(--bear-side-bg);
+  /* the strip above the ribbon icons is painted in the titlebar color,
+     with a tab-outline border underneath */
+  --titlebar-background: var(--bear-side-bg);
+  --titlebar-background-focused: var(--bear-side-bg);
+  --tab-outline-color: transparent;
+  --divider-color: transparent;
+  border-right: none;
+  border-inline-end: none;
+}
+
+.workspace-split.mod-left-split .workspace-tab-header.is-active {
+  background-color: var(--bear-side-bg-selected);
+}
+
+/* -----------------------------------------------------------------------------
+   5. Notebook Navigator — dark nav pane, light note list
+   -------------------------------------------------------------------------- */
+body.theme-light,
+body.theme-dark {
+  /* navigation pane (tags / folders) */
+  --nn-theme-nav-bg: var(--bear-side-bg);
+  --nn-theme-navitem-name-color: var(--bear-side-text);
+  --nn-theme-navitem-file-name-color: var(--bear-side-text);
+  --nn-theme-navitem-icon-color: var(--bear-side-muted);
+  --nn-theme-navitem-chevron-color: var(--bear-side-faint);
+  --nn-theme-navitem-count-color: var(--bear-side-muted);
+  --nn-theme-navitem-count-bg: transparent;
+  --nn-theme-navitem-hover-bg: var(--bear-side-bg-hover);
+  --nn-theme-navitem-selected-bg: var(--bear-side-bg-selected);
+  --nn-theme-navitem-selected-name-color: #ffffff;
+  --nn-theme-navitem-selected-icon-color: #ffffff;
+  --nn-theme-navitem-selected-chevron-color: var(--bear-side-muted);
+  --nn-theme-navitem-selected-count-color: var(--bear-side-text);
+  --nn-theme-navitem-selected-count-bg: transparent;
+  --nn-theme-navitem-selected-inactive-bg: var(--bear-side-bg-hover);
+  --nn-theme-navitem-selected-inactive-name-color: var(--bear-side-text);
+  --nn-theme-navitem-selected-inactive-icon-color: var(--bear-side-muted);
+  --nn-theme-navitem-selected-inactive-count-color: var(--bear-side-muted);
+  --nn-theme-navitem-selected-inactive-count-bg: transparent;
+  --nn-theme-navitem-border-radius: 6px;
+  --nn-theme-nav-indent-guide-color: transparent;
+  --nn-theme-nav-separator-color: rgba(255, 255, 255, 0.07);
+  --nn-theme-divider-border-color: var(--bear-pane-divider);
+
+  /* note list */
+  --nn-theme-list-bg: var(--bear-list-bg);
+  --nn-theme-list-separator-color: var(--bear-list-separator);
+  --nn-theme-list-heading-color: var(--text-normal);
+  --nn-theme-list-group-header-color: var(--text-faint);
+  --nn-theme-file-name-color: var(--text-normal);
+  --nn-theme-file-name-font-weight: 700;
+  --nn-theme-file-preview-color: var(--text-muted);
+  --nn-theme-file-date-color: var(--text-faint);
+  --nn-theme-file-parent-color: var(--text-faint);
+  --nn-theme-file-tag-color: var(--text-muted);
+  --nn-theme-file-preview-font-weight: 400;
+  --nn-theme-list-header-breadcrumb-color: var(--text-normal);
+  --nn-theme-list-header-breadcrumb-font-weight: 700;
+  --nn-theme-file-tag-bg: transparent;
+  --nn-theme-file-tag-border-color: transparent;
+  --nn-theme-file-pill-border-width: 0px;
+  --nn-theme-file-tag-font-weight: 400;
+  --nn-theme-file-tag-color: var(--text-muted);
+  --nn-theme-file-border-radius: 8px;
+  --nn-theme-file-selected-bg: var(--bear-list-selected);
+  --nn-theme-file-selected-name-color: var(--text-normal);
+  --nn-theme-file-selected-preview-color: var(--text-muted);
+  --nn-theme-file-selected-date-color: var(--text-faint);
+  --nn-theme-file-selected-inactive-bg: var(--bear-list-selected-inactive);
+  --nn-theme-file-selected-inactive-name-color: var(--text-normal);
+  --nn-theme-file-selected-inactive-preview-color: var(--text-muted);
+  --nn-theme-file-selected-inactive-date-color: var(--text-faint);
+  --nn-theme-file-selected-tag-bg: transparent;
+  --nn-theme-file-selected-inactive-tag-bg: transparent;
+}
+
+/* The list pane sits inside the dark sidebar: restore editor-side colors */
+.workspace-split.mod-left-split .nn-list-pane {
+  --background-primary: var(--bear-list-bg);
+  --background-secondary: var(--bear-list-bg);
+  --background-modifier-hover: rgba(127, 127, 127, 0.08);
+  --background-modifier-border: var(--bear-list-separator);
+  --icon-color: #9a9a9a;
+  background-color: var(--bear-list-bg);
+}
+
+.theme-light .workspace-split.mod-left-split .nn-list-pane {
+  --text-normal: #444444;
+  --text-muted: #8a8a8a;
+  --text-faint: #b4b4b4;
+}
+
+.theme-dark .workspace-split.mod-left-split .nn-list-pane {
+  --text-normal: #cdcfd2;
+  --text-muted: #8d9095;
+  --text-faint: #62656b;
+}
+
+/* Bear marks the selected note with a red bar on the left */
+body .nn-list-pane .nn-file.nn-selected .nn-file-content::before {
+  box-shadow: inset 4px 0 0 var(--bear-red);
+}
+
+/* -----------------------------------------------------------------------------
+   6. Editor typography
+   -------------------------------------------------------------------------- */
+.markdown-source-view,
+.markdown-preview-view {
+  color: var(--text-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+.inline-title {
+  font-size: var(--inline-title-size);
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--text-normal);
+  margin-bottom: 0.4em;
+}
+
+.markdown-rendered h1, .HyperMD-header-1,
+.markdown-rendered h2, .HyperMD-header-2,
+.markdown-rendered h3, .HyperMD-header-3,
+.markdown-rendered h4, .HyperMD-header-4,
+.markdown-rendered h5, .HyperMD-header-5,
+.markdown-rendered h6, .HyperMD-header-6 {
+  color: var(--text-normal);
+  letter-spacing: -0.005em;
+}
+
+/* Bear shows the heading markers faint, hanging in the left margin */
+body .markdown-source-view.mod-cm6 .cm-formatting-header {
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header .cm-formatting-header {
+  margin-left: -1.6em;
+  display: inline-block;
+  width: 1.6em;
+  text-align: right;
+  padding-right: 0.3em;
+  font-size: 0.7em;
+}
+
+/* Other markdown syntax: present but quiet, as in Bear */
+.cm-formatting-strong,
+.cm-formatting-em,
+.cm-formatting-strikethrough,
+.cm-formatting-highlight,
+.cm-formatting-link,
+.cm-formatting-code,
+.cm-formatting-quote,
+.cm-formatting-list-ul,
+.cm-formatting-list-ol {
+  color: var(--text-faint);
+}
+
+/* Bullets: small red dots */
+.cm-formatting-list-ul .list-bullet::after,
+.markdown-rendered ul > li::marker {
+  color: var(--bear-red);
+}
+
+.markdown-rendered ol > li::marker,
+.cm-formatting-list-ol {
+  color: var(--bear-red);
+}
+
+/* Highlight: Bear's marker look */
+.cm-highlight,
+.markdown-rendered mark {
+  background-color: var(--text-highlight-bg);
+  color: inherit;
+  border-radius: 5px;
+  padding: 1px 4px;
+}
+
+/* Links */
+.cm-hmd-internal-link,
+.cm-link,
+.cm-url,
+.markdown-rendered a {
+  text-decoration: none;
+}
+
+.cm-underline,
+.markdown-rendered u {
+  text-decoration: none;
+  border-bottom: 1px solid var(--bear-red);
+  padding-bottom: 1px;
+}
+
+/* -----------------------------------------------------------------------------
+   7. Tags — Bear pill style
+   -------------------------------------------------------------------------- */
+a.tag,
+.cm-hashtag {
+  background-color: var(--tag-background);
+  color: var(--tag-color);
+  font-weight: var(--tag-weight);
+  font-size: 0.94em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: none;
+  text-decoration: none;
+}
+
+.markdown-rendered a.tag {
+  border-radius: var(--tag-radius);
+  padding: var(--tag-padding-y) var(--tag-padding-x);
+}
+
+.cm-hashtag.cm-hashtag-begin {
+  border-radius: var(--tag-radius) 0 0 var(--tag-radius);
+  padding-left: var(--tag-padding-x);
+}
+
+.cm-hashtag.cm-hashtag-end {
+  border-radius: 0 var(--tag-radius) var(--tag-radius) 0;
+  padding-right: var(--tag-padding-x);
+}
+
+a.tag:hover,
+.cm-hashtag:hover {
+  background-color: var(--tag-background-hover);
+  color: var(--tag-color-hover);
+}
+
+/* -----------------------------------------------------------------------------
+   8. Todos — rounded squares, red when done, text greys out
+   -------------------------------------------------------------------------- */
+input[type="checkbox"] {
+  border: 1.5px solid var(--checkbox-border-color);
+  border-radius: var(--checkbox-radius);
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+
+.markdown-rendered li.task-list-item[data-task="x"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] {
+  color: var(--checklist-done-color);
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------------------------------
+   9. Code, quotes, rules, tables
+   -------------------------------------------------------------------------- */
+body .markdown-source-view.mod-cm6 span.cm-inline-code,
+body .markdown-rendered :not(pre) > code {
+  color: var(--code-inline);
+  background-color: var(--code-background);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.88em;
+}
+
+body .markdown-rendered pre,
+body .markdown-source-view.mod-cm6 .HyperMD-codeblock {
+  background-color: var(--code-background);
+  font-size: 0.88em;
+}
+
+.markdown-rendered pre {
+  border-radius: var(--radius-m);
+  border: none;
+  padding: 14px 16px;
+}
+
+.markdown-rendered blockquote {
+  border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+  color: var(--blockquote-color);
+  font-style: normal;
+  padding: 0 0 0 1em;
+}
+
+.HyperMD-quote {
+  color: var(--blockquote-color);
+}
+
+.markdown-rendered hr,
+.hr hr {
+  border-top: var(--hr-thickness) solid var(--hr-color);
+}
+
+.markdown-rendered table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--bear-table-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.markdown-rendered th {
+  font-weight: 700;
+  text-align: left;
+  background-color: var(--bear-table-head);
+}
+
+.markdown-rendered th,
+.markdown-rendered td {
+  border: none;
+  border-left: 1px solid var(--bear-table-border);
+  padding: 9px 14px;
+}
+
+.markdown-rendered th:first-child,
+.markdown-rendered td:first-child {
+  border-left: none;
+}
+
+.markdown-rendered tbody tr:nth-child(even) td {
+  background-color: var(--bear-table-stripe);
+}
+
+/* -----------------------------------------------------------------------------
+   10. Small finishing touches
+   -------------------------------------------------------------------------- */
+/* No status bar (word count, sync, …) — Bear keeps the window clean.
+   Style Settings: hidden (default), show on hover, or visible. */
+body:not(.polar-status-bar-hover):not(.polar-status-bar-visible) .app-container .status-bar {
+  display: none;
+}
+
+body.polar-status-bar-hover .app-container .status-bar {
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+body.polar-status-bar-hover .app-container .status-bar:hover {
+  opacity: 1;
+}
+
+::selection {
+  background-color: var(--text-selection);
+}
+
+body {
+  --caret-color: var(--bear-red);
+}
+
+/* -----------------------------------------------------------------------------
+   11. Layout details matched to Bear 2 (org.jpg)
+   -------------------------------------------------------------------------- */
+
+/* Thin light divider between note list and editor */
+body .workspace .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+  border-right: 1px solid var(--bear-pane-divider);
+}
+
+/* Tags in the note list read as plain "#tag" text, like Bear's previews */
+.nn-file .nn-file-tag:not(.nn-file-property) {
+  padding-inline: 0;
+  border: none;
+  background: transparent;
+}
+
+.nn-file .nn-file-tag:not(.nn-file-property)::before {
+  content: "#";
+}
+
+/* Sidebar: slightly larger rows and text, Bear-like */
+.nn-navigation-pane .nn-navitem-name {
+  font-size: 1.02em;
+}
+
+/* Note list header ("Notes ⌄"): bold, dark */
+.nn-list-pane .nn-pane-header-title {
+  font-weight: 700;
+  font-size: 1.08em;
+  color: var(--text-normal);
+}
+
+/* No vault footer under the sidebar (Bear has none). Settings: ⌘,
+   Style Settings: "Show vault footer" brings it back. */
+body:not(.polar-show-vault-profile) {
+  --vault-profile-display: none;
+}
+
+body:not(.polar-show-vault-profile) .workspace .workspace-sidedock-vault-profile {
+  display: none;
+}
+
+/* Shown: no full-width strip, but a small transparent row in the bottom-left
+   corner of the dark tag column, so both columns still run to the bottom.
+   Two lines: vault name on top, help and settings below. It stays within
+   Notebook Navigator's minimum tag column width (150px), so it never spills
+   onto the note list; a long vault name truncates with ….
+   no-drag: the tag column is a window drag area, which would otherwise
+   swallow clicks on the buttons. */
+body.polar-show-vault-profile .workspace-split.mod-left-split {
+  position: relative;
+}
+
+body.polar-show-vault-profile:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 0;
+  width: max-content;
+  max-width: 150px;
+  padding: 6px 8px 8px;
+  -webkit-app-region: no-drag;
+  border-top: none;
+  background-color: transparent;
+}
+
+body.polar-show-vault-profile:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+  flex: 1 0 100%;
+  min-width: 0;
+  padding: 4px 6px;
+  color: var(--text-muted);
+}
+
+body.polar-show-vault-profile:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher:hover {
+  color: var(--text-normal);
+}
+
+body.polar-show-vault-profile:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
+  flex-shrink: 0;
+}
+
+/* Keep the bottom of the tag list clear of the footer row. The space goes on
+   the scroller, not the pane: the pane is a drag area (section 12) and its own
+   padding would sit under the buttons and swallow their clicks. */
+body.polar-show-vault-profile .workspace-split.mod-left-split .nn-navigation-pane-scroller {
+  padding-bottom: 76px;
+}
+
+/* No tab bar above the editor: one calm note, like Bear.
+   Style Settings: "Show tab bar" brings it back. */
+body:not(.polar-show-tab-bar) .workspace .workspace-split.mod-root .workspace-tab-header-container,
+body:not(.polar-show-tab-bar) .workspace .workspace-split.mod-root .workspace-tabs.mod-stacked .workspace-tab-header {
+  display: none;
+}
+
+/* The tab bar was the window's drag area; let the note header take over */
+body:not(.polar-show-tab-bar) .workspace-split.mod-root .view-header {
+  -webkit-app-region: drag;
+}
+
+body:not(.polar-show-tab-bar) .workspace-split.mod-root .view-header .clickable-icon,
+body:not(.polar-show-tab-bar) .workspace-split.mod-root .view-header .view-header-title-container,
+body:not(.polar-show-tab-bar) .workspace-split.mod-root .view-header button {
+  -webkit-app-region: no-drag;
+}
+
+/* -----------------------------------------------------------------------------
+   12. Top of the window: no sidebar tab row. Traffic lights sit on the dark
+       tag column, "Notes ⌄" sits level with them on the white list — Bear 2.
+   -------------------------------------------------------------------------- */
+body .workspace .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
+  display: none;
+}
+
+/* Room for the traffic lights above the tag column */
+.workspace-split.mod-left-split .nn-navigation-pane {
+  padding-top: 44px;
+  -webkit-app-region: drag;
+}
+
+.workspace-split.mod-left-split .nn-navigation-pane > * {
+  -webkit-app-region: no-drag;
+}
+
+/* List header level with the traffic lights */
+.workspace-split.mod-left-split .nn-list-pane .nn-pane-header {
+  height: 52px;
+  min-height: 52px;
+  padding: 10px 14px 6px 16px;
+}
+
+/* Headers become the window's drag area; buttons stay clickable */
+.nn-pane-header {
+  -webkit-app-region: drag;
+}
+
+.nn-pane-header .clickable-icon,
+.nn-pane-header button,
+.nn-pane-header [role="button"],
+.nn-pane-header .nn-pane-header-title {
+  -webkit-app-region: no-drag;
+}
+
+/* Dividers inside the dark tag column stay subtle */
+.nn-navigation-pane {
+  --nn-theme-divider-border-color: rgba(255, 255, 255, 0.07);
+}
+
+/* List header shows just the name, no folder icon (Bear: "Notes ⌄") */
+.nn-list-pane .nn-pane-header .nn-pane-header-icon {
+  display: none;
+}
+
+/* -----------------------------------------------------------------------------
+   13. Links and footnotes, as in Bear
+   -------------------------------------------------------------------------- */
+
+/* All links: plain red, normal weight */
+body {
+  --link-weight: inherit;
+}
+
+.cm-hmd-internal-link,
+.cm-hmd-internal-link .cm-underline,
+.markdown-rendered a.internal-link {
+  font-weight: inherit;
+}
+
+/* No ↗ icon after external links */
+body .external-link,
+body .markdown-rendered a.external-link,
+body .markdown-source-view.mod-cm6 .external-link {
+  background-image: none;
+  padding-right: 0;
+}
+
+/* Footnote references: small red superscript */
+body .markdown-source-view.mod-cm6 .cm-footref.cm-hmd-barelink,
+body .markdown-source-view.mod-cm6 .cm-footref,
+body .markdown-rendered sup.footnote-ref a,
+body .markdown-rendered a.footnote-link {
+  color: var(--bear-red);
+  text-decoration: none;
+}
+
+.markdown-source-view.mod-cm6 .cm-footref {
+  font-size: 0.72em;
+}
+
+/* -----------------------------------------------------------------------------
+   14. Tables in Live Preview too: Bear's full-width, roomy, striped table
+   -------------------------------------------------------------------------- */
+body {
+  --table-border-color: var(--bear-table-border);
+  --table-header-border-color: var(--bear-table-border);
+  --table-header-background: var(--bear-table-head);
+  --table-header-background-hover: var(--bear-table-head);
+  --table-row-alt-background: transparent;
+  --table-row-alt-background-hover: transparent;
+  --table-background: var(--background-primary);
+  --table-header-weight: 700;
+  --table-header-color: var(--text-normal);
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper {
+  width: 100%;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--bear-table-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget th,
+.markdown-source-view.mod-cm6 .cm-table-widget td {
+  border: none;
+  border-left: 1px solid var(--bear-table-border);
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget th:first-child,
+.markdown-source-view.mod-cm6 .cm-table-widget td:first-child {
+  border-left: none;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget th {
+  background-color: var(--bear-table-head);
+  text-align: left;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget tbody tr:nth-child(even) td {
+  background-color: var(--bear-table-stripe);
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper {
+  padding: 9px 14px;
+}
+
+/* Reading view: also full width */
+.markdown-rendered table {
+  width: 100%;
+}
+
+/* -----------------------------------------------------------------------------
+   15. Code highlighting: quiet palette in Bear colours
+   -------------------------------------------------------------------------- */
+.theme-light {
+  --code-normal: #444444;
+  --code-keyword: #dc4c51;
+  --code-tag: #dc4c51;
+  --code-important: #dc4c51;
+  --code-string: #9a6b30;
+  --code-value: #c0692a;
+  --code-function: #2f2f2f;
+  --code-property: #4f7194;
+  --code-comment: #a8a8a8;
+  --code-operator: #8a8a8a;
+  --code-punctuation: #8a8a8a;
+}
+
+.theme-dark {
+  --code-normal: #cdcfd2;
+  --code-keyword: #e36366;
+  --code-tag: #e36366;
+  --code-important: #e36366;
+  --code-string: #d1a56b;
+  --code-value: #e08d5a;
+  --code-function: #eceef0;
+  --code-property: #8fb0d1;
+  --code-comment: #6c6f75;
+  --code-operator: #8d9095;
+  --code-punctuation: #8d9095;
+}
+
+/* Language label in the corner: faint, like Bear's chrome */
+.markdown-source-view.mod-cm6 .code-block-flair,
+.markdown-rendered pre .copy-code-button {
+  color: var(--text-faint);
+}
+
+/* -----------------------------------------------------------------------------
+   16. Note header: like Bear, only a few quiet icons on the right
+   -------------------------------------------------------------------------- */
+body:not(.polar-show-note-header) .workspace-split.mod-root .view-header-nav-buttons,
+body:not(.polar-show-note-header) .workspace-split.mod-root .view-header-title-container {
+  visibility: hidden;
+}
+
+.workspace-split.mod-root .view-header {
+  background-color: var(--background-primary);
+}
+
+.workspace-split.mod-root .view-actions {
+  margin-left: auto;
+}
+
+.workspace-split.mod-root .view-header .clickable-icon {
+  color: var(--text-faint);
+}
+
+.workspace-split.mod-root .view-header .clickable-icon:hover {
+  color: var(--text-muted);
+}

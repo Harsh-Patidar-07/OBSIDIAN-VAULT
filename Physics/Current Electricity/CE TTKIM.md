@@ -10,6 +10,7 @@
    In series connection, use Current formula cause current is constant in Series
 2. In new and old Resistance questions where length or cross-section area is changed, make sure to account for both changes, as when length is increased, area of cross section must decrease, so always keep volume constant, then solve the question.
 
+3. **Resistivity** is also known as **Specific Resistance**
 
 ---
 
